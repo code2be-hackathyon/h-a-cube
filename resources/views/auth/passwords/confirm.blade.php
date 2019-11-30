@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('adminlte::passwords.confirm')
 
 @section('content')
 <div class="container">

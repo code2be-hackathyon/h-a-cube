@@ -11,7 +11,7 @@
 |
 */
 
-Route::middleware()->get('/', function () {
+Route::get('/', function () {
     if (Auth::check()) {
         return view('home');
     } else {
