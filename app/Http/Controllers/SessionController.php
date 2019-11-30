@@ -9,7 +9,7 @@ class SessionController extends Controller
 {
     public function index()
     {
-        return Sessions::all();
+        return view('createSession');
     }
 
     public function show(Sessions $sessions)

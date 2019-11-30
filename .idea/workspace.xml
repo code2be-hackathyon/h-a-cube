@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cae07bad-f6b4-4e64-ae61-12eaad42d60a" name="Default Changelist" comment="" />
+    <list default="true" id="cae07bad-f6b4-4e64-ae61-12eaad42d60a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SessionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SessionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/createSession.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/createSession.blade.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -153,6 +160,7 @@
       <updated>1575111316580</updated>
       <workItem from="1575111323703" duration="1615000" />
       <workItem from="1575112960959" duration="5745000" />
+      <workItem from="1575139993212" duration="6815000" />
     </task>
     <servers />
   </component>
@@ -160,22 +168,22 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1804" height="275" key="GridCell.Tab.0.bottom" timestamp="1575119460097">
+    <state width="1804" height="275" key="GridCell.Tab.0.bottom" timestamp="1575132191091">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1804" height="275" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1575119460097" />
-    <state width="1804" height="275" key="GridCell.Tab.0.center" timestamp="1575119460097">
+    <state width="1804" height="275" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1575132191091" />
+    <state width="1804" height="275" key="GridCell.Tab.0.center" timestamp="1575132191090">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1804" height="275" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1575119460097" />
-    <state width="1804" height="275" key="GridCell.Tab.0.left" timestamp="1575119460096">
+    <state width="1804" height="275" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1575132191090" />
+    <state width="1804" height="275" key="GridCell.Tab.0.left" timestamp="1575132191088">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1804" height="275" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1575119460096" />
-    <state width="1804" height="275" key="GridCell.Tab.0.right" timestamp="1575119460097">
+    <state width="1804" height="275" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1575132191088" />
+    <state width="1804" height="275" key="GridCell.Tab.0.right" timestamp="1575132191091">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1804" height="275" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1575119460097" />
+    <state width="1804" height="275" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1575132191091" />
     <state x="484" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1575112984907">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
