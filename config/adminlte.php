@@ -134,7 +134,7 @@ return [
 
     'use_route_url' => false,
 
-    'dashboard_url' => 'home',
+    'dashboard_url' => '',
 
     'logout_url' => 'logout',
 
@@ -173,11 +173,6 @@ return [
     */
 
     'menu' => [
-        [
-            'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
-        ],
         ['header' => 'PARAMETRES DU COMPTE'],
         [
             'text' => 'Profil',
@@ -193,14 +188,16 @@ return [
         [
             'text'       => 'Chercher un cours',
             'icon_color' => 'searchCourse',
+            'icon'       => 'fas fa-fw fa-search'
         ],
         [
             'text'       => 'Créer un cours',
-            'icon_color' => 'createCourse',
+            'url'        => 'createSession',
+            'icon'       => 'fas fa-fw fa-plus-circle',
         ],
         [
             'text'       => 'Proposer une matière',
-            'icon_color' => 'aqua',
+            'icon'       => 'fas fa-fw fa-plus',
         ],
     ],
 
