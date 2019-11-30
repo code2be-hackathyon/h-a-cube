@@ -19,6 +19,13 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->integer('age');
+            $table->integer('usertype_id')->unsigned();
+            $table->foreign('usertype_id')->references('id')->on('usertypes');
+            $table->string('phone');
+            $table->integer('etablissement_id')->unsigned();
+            $table->foreign('etablissement_id')->references('id')->on('etablissements');
+            $table->boolean('isAllowedToCreateCourse');
             $table->rememberToken();
             $table->timestamps();
         });
