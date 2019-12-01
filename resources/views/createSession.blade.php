@@ -26,6 +26,9 @@
 
                             </div>
                             <div class="form-group">
+                                <input type="hidden" id="user_id" value=" {{$_SESSION['user_id']}} ">
+                            </div>
+                            <div class="form-group">
                                 <label for="date">Date</label>
                                 <input type="date" class="form-control" id="date">
                             </div>
