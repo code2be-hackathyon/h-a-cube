@@ -9,6 +9,11 @@ class UserController extends Controller
 {
     public function index()
     {
+        return view('changePwd');
+    }
+
+    public function getAll()
+    {
         return User::all();
     }
 

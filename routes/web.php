@@ -23,6 +23,8 @@ Route::get('/newCourse', 'CourseController@index');
 
 Route::get('createSession', 'SessionController@index');
 
+Route::get('/changePwd', 'UserController@index');
+
 Auth::routes();
 
 Route::get('courses', 'CourseController@index');

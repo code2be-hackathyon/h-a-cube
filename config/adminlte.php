@@ -179,11 +179,6 @@ return [
             'url'  => 'profile',
             'icon' => 'fas fa-fw fa-user',
         ],
-        [
-            'text' => 'change_password',
-            'url'  => 'changePwd',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
         ['header' => 'LES COURS'],
         [
             'text'       => 'Chercher un cours',

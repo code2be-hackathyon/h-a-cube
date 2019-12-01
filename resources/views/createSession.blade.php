@@ -38,11 +38,11 @@
                             </div>
                             <div class="form-group">
                                 <label for="nbMaxUsers">Nombre max de personnes</label>
-                                <input type="number" class="form-control" id="nbMaxUsers">
+                                <input type="number" class="form-control" id="nbMaxUsers" min="1">
                             </div>
                             <div class="form-group" id="difficulty_div">
                                 <label for="difficulty">Difficulté</label>
-                                <input type="number" class="form-control" id="difficulty" max="5"
+                                <input type="number" class="form-control" id="difficulty" min="1" max="5"
                                        onchange="
                                            // const difficulty_div = document.getElementById('difficulty_div');
                                            // const value = document.getElementById('difficulty').value;
