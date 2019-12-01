@@ -182,7 +182,7 @@ return [
         ['header' => 'LES COURS'],
         [
             'text'       => 'Chercher un cours',
-            'icon_color' => 'searchCourse',
+            'url' => 'searchSession',
             'icon'       => 'fas fa-fw fa-search'
         ],
         [

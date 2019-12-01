@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cae07bad-f6b4-4e64-ae61-12eaad42d60a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/profile.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/search.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/changePwd.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/changePwd.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/createSession.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/createSession.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/newCourse.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/newCourse.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SessionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SessionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/adminlte.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/adminlte.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,12 +129,18 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -172,6 +181,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="315" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1575209140198">
+      <screen x="70" y="27" width="3770" height="1053" />
+    </state>
+    <state x="315" y="311" width="424" height="491" key="FileChooserDialogImpl/70.27.3770.1053@70.27.3770.1053" timestamp="1575209140198" />
     <state width="1804" height="275" key="GridCell.Tab.0.bottom" timestamp="1575132191091">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>

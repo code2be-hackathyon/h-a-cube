@@ -7,7 +7,12 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function index()
+    public function profile()
+    {
+        return view('profile');
+    }
+
+    public function changePwd()
     {
         return view('changePwd');
     }

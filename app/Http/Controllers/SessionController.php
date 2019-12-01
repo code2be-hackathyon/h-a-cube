@@ -12,6 +12,10 @@ class SessionController extends Controller
         return view('createSession');
     }
 
+    public function search() {
+        return view('search');
+    }
+
     public function show(Sessions $sessions)
     {
         return $sessions;

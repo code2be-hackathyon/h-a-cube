@@ -23,7 +23,11 @@ Route::get('/newCourse', 'CourseController@index');
 
 Route::get('createSession', 'SessionController@index');
 
-Route::get('/changePwd', 'UserController@index');
+Route::get('/changePwd', 'UserController@changePwd')->name('changePwd');
+
+Route::get('/searchSession', 'SessionController@search');
+
+Route::get('/profile', 'UserController@profile');
 
 Auth::routes();
 
