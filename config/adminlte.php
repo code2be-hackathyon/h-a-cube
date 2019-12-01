@@ -134,7 +134,7 @@ return [
 
     'use_route_url' => false,
 
-    'dashboard_url' => '',
+    'dashboard_url' => '/',
 
     'logout_url' => 'logout',
 
@@ -197,6 +197,7 @@ return [
         ],
         [
             'text'       => 'Proposer une matière',
+            'url'        => 'newCourse',
             'icon'       => 'fas fa-fw fa-plus',
         ],
     ],

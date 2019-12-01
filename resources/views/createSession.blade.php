@@ -26,7 +26,7 @@
 
                             </div>
                             <div class="form-group">
-                                <input type="hidden" id="user_id" value=" {{$_SESSION['user_id']}} ">
+                                <input type="hidden" id="user_id" value=" {{}}">
                             </div>
                             <div class="form-group">
                                 <label for="date">Date</label>
@@ -42,7 +42,7 @@
                             </div>
                             <div class="form-group" id="difficulty_div">
                                 <label for="difficulty">Difficulté</label>
-                                <input type="number" class="form-control" id="difficulty"
+                                <input type="number" class="form-control" id="difficulty" max="5"
                                        onchange="
                                            // const difficulty_div = document.getElementById('difficulty_div');
                                            // const value = document.getElementById('difficulty').value;
@@ -55,7 +55,7 @@
                             </div>
                         </div>
                         <!-- /.card-body -->
-                        <div class="card-footer" id="footer">
+                        <div id="footer">
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </div>
                     </form>
