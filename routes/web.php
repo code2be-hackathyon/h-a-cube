@@ -11,12 +11,18 @@
 |
 */
 
+
+Route::group(['middleware' => 'isAdmin'], function () {
+
+    Route::get('/test', function () {
+        return view('frontoffice/newCourse');
+    });
+
+});
+
+
 Route::get('/', function () {
-//    if (Auth::check()) {
-        return view('home');
-//    } else {
-//        return view('auth/login');
-//    }
+    return view('home');
 });
 
 Route::get('/newCourse', 'CourseController@index');
