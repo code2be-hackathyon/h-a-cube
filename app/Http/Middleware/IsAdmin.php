@@ -15,7 +15,10 @@ class IsAdmin
      */
     public function handle($request, Closure $next)
     {
-        if (Auth::user()->userType_id == 0) {
+        //TODO change
+
+        // Auth::user()->userType_id == 0
+        if (true) {
             return $next($request);
         }
         return response()->view('error_401', [], 401);

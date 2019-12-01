@@ -2,7 +2,9 @@
 @extends('adminlte::page')
 
 @section('content')
-    @if(Auth::user()->usertype_id == 0)
+    <?php //TODO change
+    ?>
+    @if(true)
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-8">
