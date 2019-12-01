@@ -19,7 +19,7 @@
                                         <table class="table table-bordered">
                                             <thead>
                                             <tr>
-                                                <th>Cours en rapport avec le thème : allemand</th>
+                                                <th>Cours en rapport avec le thème : Allemand</th>
                                                 <th>Date</th>
                                                 <th>Heure</th>
                                                 <th>Professeur</th>
