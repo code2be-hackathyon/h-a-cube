@@ -10,7 +10,7 @@ class CourseController extends Controller
 
     public function index()
     {
-        return view('newCourse');
+        return view('frontoffice/newCourse');
     }
 
     public function getAll()

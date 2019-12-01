@@ -9,11 +9,11 @@ class SessionController extends Controller
 {
     public function index()
     {
-        return view('createSession');
+        return view('frontoffice/createSession');
     }
 
     public function search() {
-        return view('search');
+        return view('frontoffice/search');
     }
 
     public function show(Sessions $sessions)
