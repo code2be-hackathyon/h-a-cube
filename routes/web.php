@@ -12,28 +12,31 @@
 */
 
 
+use App\Sessions;
+use Illuminate\Support\Facades\Route;
+
 Route::group(['middleware' => 'isAdmin'], function () {
-
-    Route::get('/test', function () {
-        return view('frontoffice/newCourse');
-    });
-
+    Route::get('sessionList', 'SessionController@showSessionList');
+    Route::get('sessionDetails', 'SessionController@showSessionDetails')->name('sessionDetails');
 });
 
+Route::post('newCourse/send', 'CourseController@send')->name('newCourse');
 
 Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/newCourse', 'CourseController@index');
+Route::post('createSession/validate', 'SessionController@insert')->name('createSession');
+
+Route::get('newCourse', 'CourseController@index');
 
 Route::get('createSession', 'SessionController@index');
 
-Route::get('/changePwd', 'UserController@changePwd')->name('changePwd');
+Route::get('changePwd', 'UserController@changePwd')->name('changePwd');
 
-Route::get('/searchSession', 'SessionController@search');
+Route::get('searchSession', 'SessionController@search');
 
-Route::get('/profile', 'UserController@profile');
+Route::get('profile', 'UserController@profile');
 
 Auth::routes();
 
@@ -60,6 +63,3 @@ Route::get('etablissements/{etablissement}', 'EtablissementController@show');
 Route::post('etablissements', 'EtablissementController@store');
 Route::put('etablissements/{etablissement}', 'EtablissementController@update');
 Route::delete('etablissements/etablissement}', 'EtablissementController@delete');
-
-
-Route::post('createSession/validate', 'SessionController@insert')->name('createSession');

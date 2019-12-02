@@ -1,67 +1,42 @@
 @extends('adminlte::page')
+
 @section('content')
-    <?php
-    $courses = \App\Courses::all()
-    ?>
     <section class="content">
         <div class="container-fluid">
             <!-- COLOR PALETTE -->
             <div class="card card-default color-palette-box">
                 <div class="card-header">
                     <h3 class="card-title">
-                        Créer un atelier
+                        Détails de l'atelier
                     </h3>
                 </div>
                 <div class="card-body">
                     <!-- /.card-header -->
                     <!-- form start -->
-                    <form role="form" method="POST" action="{{route('createSession')}}">
-                        @csrf
+                    <form role="form">
                         <div class="card-body">
                             <div class="form-group">
                                 <label for="course_id">Type de cours</label>
-                                <select class="form-control" id="course_id" name="course_id">
-                                    <?php $number = 1;
-                                    foreach($courses as $course)
-                                    {?>
-                                    <option id="<?= $number ?>"><?=$course->label?></option>
-                                    <?php
-                                    } ?>
-                                </select>
-
-
+                                <input type="text" readonly class="form-control" id="course_id">
                             </div>
                             <div class="form-group">
-                                <?php //TODO set value as user->id ?>
-                                <input type="hidden" id="user_id" value="{{}}">
-                            </div>
-                            <div class="form-group">
-                                <label for="title">Titre</label>
-                                <input type="text" class="form-control" id="title" name="title" required>
+                                <input type="hidden" id="user_id" value=" {{}}">
                             </div>
                             <div class="form-group">
                                 <label for="date">Date</label>
-                                <input type="date" class="form-control" id="date" name="date" required >
-                            </div>
-                            <div class="form-group">
-                                <label for="startedHour">Heure de début</label>
-                                <input type="time" class="form-control" id="startedHour" name="startedHour" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="endedHour">Heure de fin</label>
-                                <input type="time" class="form-control" id="endedHour" name="endedHour" required>
+                                <input type="date" class="form-control" id="date">
                             </div>
                             <div class="form-group">
                                 <label for="description">Description</label>
-                                <textarea class="form-control" id="description" name="description" cols="40" rows="5" required></textarea>
+                                <textarea class="form-control" id="description" cols="40" rows="5"></textarea>
                             </div>
                             <div class="form-group">
                                 <label for="nbMaxUsers">Nombre max de personnes</label>
-                                <input type="number" class="form-control" id="nbMaxUsers" name="nbMaxUsers" min="1" required>
+                                <input type="number" class="form-control" id="nbMaxUsers" min="1">
                             </div>
                             <div class="form-group" id="difficulty_div">
                                 <label for="difficulty">Difficulté</label>
-                                <input type="number" class="form-control" id="difficulty" name="difficulty" min="1" max="5"
+                                <input type="number" class="form-control" id="difficulty" min="1" max="5"
                                        onchange="
                                            // const difficulty_div = document.getElementById('difficulty_div');
                                            // const value = document.getElementById('difficulty').value;
@@ -70,12 +45,12 @@
                                            //     div.className = 'fa fa-star checked';
                                            //     difficulty_div.appendChild(div);
                                            // }
-                                       " required>
+                                       ">
                             </div>
                         </div>
                         <!-- /.card-body -->
                         <div id="footer">
-                            <button type="submit" class="btn btn-warning">Envoyer</button>
+                            <button type="submit" class="btn btn-primary">Envoyer</button>
                         </div>
                     </form>
                     <!-- /.card -->

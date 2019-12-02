@@ -4,12 +4,24 @@ namespace App\Http\Controllers;
 
 use App\Courses;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CourseController extends Controller
 {
 
     public function index()
     {
+        return view('frontoffice/newCourse');
+    }
+
+    public function send()
+    {
+        $label = $_POST['courseValue'];
+        $description = $_POST['courseDescription'];
+
+        DB::table('courses')->insert(
+            ['label' => $label, 'description' => $description]
+        );
         return view('frontoffice/newCourse');
     }
 

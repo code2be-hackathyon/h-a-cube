@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Courses;
 use App\Sessions;
+use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -13,8 +15,26 @@ class SessionController extends Controller
         return view('frontoffice/createSession');
     }
 
-    public function search() {
+    public function search()
+    {
         return view('frontoffice/search');
+    }
+
+    public function showSessionList()
+    {
+        $data = Sessions::all();
+        foreach ($data as $item) {
+            $item->user_id = User::where('id', $item->user_id)->select('firstname', 'lastname')->get();
+            $item->courses_id = Courses::where('id', $item->courses_id)->select('label')->get();
+        }
+        return view('backoffice/sessionList')->with('data', $data);
+    }
+
+    public function showSessionDetails(Request $request)
+    {
+        $session_id = $request->id;
+        $data = Sessions::where('id', $session_id);
+        return view('backoffice/sessionDetails')->with('data', $data);
     }
 
     public function show(Sessions $sessions)
@@ -24,7 +44,6 @@ class SessionController extends Controller
 
     public function store(Request $request)
     {
-        echo $request;
         $sessions = Sessions::create($request->all());
 
         return response()->json($sessions, 201);
@@ -40,6 +59,8 @@ class SessionController extends Controller
     public function delete(Sessions $sessions)
     {
         $sessions->delete();
+
+
     }
 
     public function insert()
@@ -62,6 +83,4 @@ class SessionController extends Controller
         return view('frontoffice/createSession');
 
     }
-
-
 }

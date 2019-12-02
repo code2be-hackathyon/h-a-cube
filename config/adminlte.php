@@ -31,7 +31,7 @@ return [
     */
 
     'logo' => '<b>Hello</b>Lesson',
-    'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+    'logo_img' => 'vendor/Logo.png',
     'logo_img_class' => 'brand-image-xl',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
@@ -175,19 +175,25 @@ return [
     'menu' => [
         ['header' => 'LES COURS'],
         [
-            'text'       => 'Chercher un atelier',
-            'url' => 'searchSession',
+            'text'       => 'Chercher un cours',
+            'url'        => 'searchSession',
             'icon'       => 'fas fa-fw fa-search'
         ],
         [
-            'text'       => 'Créer un atelier',
+            'text'       => 'Créer un cours',
             'url'        => 'createSession',
             'icon'       => 'fas fa-fw fa-plus-circle',
         ],
         [
-            'text'       => 'Proposer une thème',
+            'text'       => 'Proposer une matière',
             'url'        => 'newCourse',
             'icon'       => 'fas fa-fw fa-plus',
+        ],
+        ['header' => 'COIN DES ADMINS'],
+        [
+            'text'       => 'Admin - Liste des sessions',
+            'url'        => 'sessionList',
+            'icon'       => 'fas fa-fw fa-list'
         ],
         ['header' => 'PARAMETRES DU COMPTE'],
         [
