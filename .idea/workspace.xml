@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cae07bad-f6b4-4e64-ae61-12eaad42d60a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ScoresController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Scores.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2019_12_02_180253_create_scores_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SessionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SessionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EtablissementController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EtablissementController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_30_152810_create_sessions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_30_152810_create_sessions_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backoffice/sessionDetails.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backoffice/sessionDetails.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_30_152849_create_studentpools_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_30_152849_create_studentpools_table.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,14 +139,15 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/resources/views/frontoffice" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/vendor" />
       <recent name="$PROJECT_DIR$/resources/views/backoffice" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/resources/views" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/views/frontoffice" />
     </key>
   </component>
   <component name="RunManager">
@@ -183,7 +186,7 @@
       <workItem from="1575216831545" duration="231000" />
       <workItem from="1575220932719" duration="545000" />
       <workItem from="1575297867320" duration="4182000" />
-      <workItem from="1575306382622" duration="3014000" />
+      <workItem from="1575306382622" duration="4454000" />
     </task>
     <servers />
   </component>
@@ -194,10 +197,14 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1190" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1575298934134">
+    <state x="784" y="241" width="412" height="631" key="#com.intellij.ide.util.MemberChooser" timestamp="1575310095994">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="1190" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1575298934134" />
+    <state x="784" y="241" width="412" height="631" key="#com.intellij.ide.util.MemberChooser/70.27.1850.1053@70.27.1850.1053" timestamp="1575310095994" />
+    <state x="1190" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1575310124068">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="1190" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1575310124068" />
     <state x="190" y="311" width="374" height="505" key="FileChooserDialogImpl" timestamp="1575298809133">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
@@ -219,6 +226,10 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state width="879" height="275" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1575302141223" />
+    <state x="589" y="367" width="801" height="380" key="NewPhpClassDialog" timestamp="1575310314875">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="589" y="367" width="801" height="380" key="NewPhpClassDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1575310314875" />
     <state x="484" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1575306505440">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateStudentpoolsTable extends Migration
+class CreateScoresTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateStudentpoolsTable extends Migration
      */
     public function up()
     {
-        Schema::create('studentpools', function (Blueprint $table) {
+        Schema::create('scores', function (Blueprint $table) {
             $table->integerIncrements('id');
-            $table->integer('user_id')->unsigned();
-            $table->integer('session_id')->unsigned();
-            $table->integer('note');
+            $table->integer('user_id');
+            $table->integer('score');
         });
     }
 
@@ -28,6 +27,6 @@ class CreateStudentpoolsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('studentpools');
+        Schema::dropIfExists('scores');
     }
 }

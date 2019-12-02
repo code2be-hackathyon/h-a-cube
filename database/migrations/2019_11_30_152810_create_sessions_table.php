@@ -15,14 +15,12 @@ class CreateSessionsTable extends Migration
     {
         Schema::create('sessions', function (Blueprint $table){
             $table->integerIncrements('id');
-            $table->integer('courses_id')->unsigned();
-            $table->foreign('courses_id')->references('id')->on('courses');
+            $table->integer('courses_id');
             $table->string('title');
             $table->date('date');
             $table->string('startedHour');
             $table->string('endedHour');
-            $table->integer('user_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->integer('user_id');
             $table->string('description');
             $table->integer('nbMaxUsers');
             $table->integer('difficulty');

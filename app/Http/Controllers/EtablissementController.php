@@ -34,7 +34,5 @@ class EtablissementController extends Controller
     public function delete(Etablissements $etablissement)
     {
         $etablissement->delete();
-
-
     }
 }
