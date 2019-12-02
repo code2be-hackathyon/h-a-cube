@@ -11,16 +11,16 @@
                 </div>
                 <div class="card-body">
                     <div class="card-body">
-                        <p>Adresse mail : benjamin.sireau@gmail.com</p>
+                        <p>Adresse mail : {{  Auth::user()->email  }}</p>
                         <div class="row"><p>Mot de passe : ********</p>
                             <div class=col-md-1><a class="btn btn-block bg-gradient-primary"
                                                    href="{{route('changePwd')}}">Changer</a></div>
                         </div>
-                        <p>Nom : <b>Sireau</b></p>
-                        <p>Prénom : <b>Benjamin</b></p>
-                        <p>Age : <b>20 ans</b></p>
-                        <p>Etablissement : <b>Notre Dame du Roc</b></p>
-                        <p>Ville : <b>La Roche sur Yon</b></p>
+                        <p>Nom : <b>{{ $user->lastname }}</b></p>
+                        <p>Prénom : <b>{{ $user->firstname }}</b></p>
+                        <p>Age : <b>{{ $user->age }} ans</b></p>
+                        <p>Etablissement : <b>{{ $user->etablissementLabel[0]->label }}</b></p>
+                        <p>Ville : <b>{{ $user->etablissementCity[0]->city }}</b></p>
 
 
                         <br>

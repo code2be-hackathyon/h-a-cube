@@ -16,6 +16,8 @@ class CreateUsertypesTable extends Migration
         Schema::create('usertypes', function (Blueprint $table) {
             $table->integerIncrements('id');
             $table->string('label');
+            $table->dateTime('created_at');
+            $table->dateTime('updated_at');
         });
     }
 

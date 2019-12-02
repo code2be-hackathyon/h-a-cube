@@ -1,5 +1,6 @@
 @extends('adminlte::page')
 
+@if(Auth::check())
 @section('content')
     <section class="content">
         <div class="container-fluid">
@@ -38,7 +39,7 @@
                                 <input type="hidden" class="form-control" id="difficulty">
                                 @for($i = 0; $i <= $data->difficulty; $i++)
                                     <i class="fas fa-star"></i>
-                                 @endfor
+                                @endfor
                             </div>
                             <div class="form-group">
                                 <label for="room">Salle :</label>
@@ -56,3 +57,6 @@
         </div>
     </section>
 @endsection
+@else
+    @php(redirect('/register'))
+@endif
