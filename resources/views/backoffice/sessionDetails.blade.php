@@ -13,39 +13,36 @@
                 <div class="card-body">
                     <!-- /.card-header -->
                     <!-- form start -->
-                    <form role="form">
+                    <?php //TODO pass params in the action ?>
+                    <form role="form" action="{{route('sessionDetailsValidate', ['id' => $data->id])}}" method="POST">
+                        @csrf
                         <div class="card-body">
                             <div class="form-group">
                                 <label for="course_id">Type de cours</label>
                                 <input type="text" readonly class="form-control" id="course_id">
                             </div>
                             <div class="form-group">
-                                <input type="hidden" id="user_id" value=" {{}}">
-                            </div>
-                            <div class="form-group">
                                 <label for="date">Date</label>
-                                <input type="date" class="form-control" id="date">
+                                <input type="date" readonly class="form-control" id="date">
                             </div>
                             <div class="form-group">
                                 <label for="description">Description</label>
-                                <textarea class="form-control" id="description" cols="40" rows="5"></textarea>
+                                <textarea class="form-control" readonly id="description" cols="40" rows="5"></textarea>
                             </div>
                             <div class="form-group">
                                 <label for="nbMaxUsers">Nombre max de personnes</label>
-                                <input type="number" class="form-control" id="nbMaxUsers" min="1">
+                                <input type="number" class="form-control" readonly id="nbMaxUsers" min="1">
                             </div>
                             <div class="form-group" id="difficulty_div">
                                 <label for="difficulty">Difficulté</label>
-                                <input type="number" class="form-control" id="difficulty" min="1" max="5"
-                                       onchange="
-                                           // const difficulty_div = document.getElementById('difficulty_div');
-                                           // const value = document.getElementById('difficulty').value;
-                                           // for (star of value) {
-                                           //     let div = document.createElement('span');
-                                           //     div.className = 'fa fa-star checked';
-                                           //     difficulty_div.appendChild(div);
-                                           // }
-                                       ">
+                                <input type="hidden" class="form-control" id="difficulty">
+                                @for($i = 0; $i <= $data->difficulty; $i++)
+                                    <i class="fas fa-star"></i>
+                                 @endfor
+                            </div>
+                            <div class="form-group">
+                                <label for="room">Salle :</label>
+                                <input type="text" class="form-control" id="room" value="{{$data->room}}" name="room">
                             </div>
                         </div>
                         <!-- /.card-body -->

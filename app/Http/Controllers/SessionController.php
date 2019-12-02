@@ -33,8 +33,8 @@ class SessionController extends Controller
     public function showSessionDetails(Request $request)
     {
         $session_id = $request->id;
-        $data = Sessions::where('id', $session_id);
-        return view('backoffice/sessionDetails')->with('data', $data);
+        $data = Sessions::where('id', $session_id)->get();
+        return view('backoffice/sessionDetails')->with('data', $data[0]);
     }
 
     public function show(Sessions $sessions)
@@ -49,11 +49,10 @@ class SessionController extends Controller
         return response()->json($sessions, 201);
     }
 
-    public function update(Request $request, Sessions $sessions)
+    public function update(Request $request)
     {
-        $sessions->update($request->all());
-
-        return response()->json($sessions, 200);
+        Sessions::where('id', $request->id)->update(['room' => $request->room]);
+        return $this->showSessionList();
     }
 
     public function delete(Sessions $sessions)

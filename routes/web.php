@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::group(['middleware' => 'isAdmin'], function () {
     Route::get('sessionList', 'SessionController@showSessionList');
     Route::get('sessionDetails', 'SessionController@showSessionDetails')->name('sessionDetails');
+    Route::post('sessionDetails/validate', 'SessionController@update')->name('sessionDetailsValidate');
 });
 
 Route::post('newCourse/send', 'CourseController@send')->name('newCourse');
