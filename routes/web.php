@@ -60,3 +60,6 @@ Route::get('etablissements/{etablissement}', 'EtablissementController@show');
 Route::post('etablissements', 'EtablissementController@store');
 Route::put('etablissements/{etablissement}', 'EtablissementController@update');
 Route::delete('etablissements/etablissement}', 'EtablissementController@delete');
+
+
+Route::post('createSession/validate', 'SessionController@insert')->name('createSession');

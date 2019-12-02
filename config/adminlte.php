@@ -173,27 +173,27 @@ return [
     */
 
     'menu' => [
+        ['header' => 'LES COURS'],
+        [
+            'text'       => 'Chercher un atelier',
+            'url' => 'searchSession',
+            'icon'       => 'fas fa-fw fa-search'
+        ],
+        [
+            'text'       => 'Créer un atelier',
+            'url'        => 'createSession',
+            'icon'       => 'fas fa-fw fa-plus-circle',
+        ],
+        [
+            'text'       => 'Proposer une thème',
+            'url'        => 'newCourse',
+            'icon'       => 'fas fa-fw fa-plus',
+        ],
         ['header' => 'PARAMETRES DU COMPTE'],
         [
             'text' => 'Profil',
             'url'  => 'profile',
             'icon' => 'fas fa-fw fa-user',
-        ],
-        ['header' => 'LES COURS'],
-        [
-            'text'       => 'Chercher un cours',
-            'url' => 'searchSession',
-            'icon'       => 'fas fa-fw fa-search'
-        ],
-        [
-            'text'       => 'Créer un cours',
-            'url'        => 'createSession',
-            'icon'       => 'fas fa-fw fa-plus-circle',
-        ],
-        [
-            'text'       => 'Proposer une matière',
-            'url'        => 'newCourse',
-            'icon'       => 'fas fa-fw fa-plus',
         ],
     ],
 

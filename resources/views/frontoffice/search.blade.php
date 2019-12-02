@@ -7,7 +7,7 @@
             <div class="card card-default color-palette-box">
                 <div class="card-header">
                     <h3 class="card-title">
-                        Chercher une session
+                        Chercher un atelier
                     </h3>
                 </div>
                 <div class="card-body">

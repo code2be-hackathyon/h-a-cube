@@ -17,7 +17,10 @@ class CreateSessionsTable extends Migration
             $table->integerIncrements('id');
             $table->integer('courses_id')->unsigned();
             $table->foreign('courses_id')->references('id')->on('courses');
-            $table->timestamp('date');
+            $table->string('title');
+            $table->date('date');
+            $table->string('startedHour');
+            $table->string('endedHour');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
             $table->string('description');
