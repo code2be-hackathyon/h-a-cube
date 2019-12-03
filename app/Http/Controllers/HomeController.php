@@ -30,7 +30,7 @@ class HomeController extends Controller
     public function index()
     {
         $sessionsForUser = new Sessions();
-        $tagsToSend = [];
+        $tags = [];
         $dataFromTags = [];
 
         if (Auth::check()) {
@@ -41,11 +41,11 @@ class HomeController extends Controller
             }
             $tagsForUser = UserTags::where('user_id', Auth::user()->id);
             foreach($tagsForUser as $tag) {
-                array_push($tagsToSend, Arr::random($tagsForUser));
+                array_push($tags, Arr::random($tagsForUser));
             }
             // TODO test with real data
-            foreach($tagsToSend as $tag) {
-                array_push($dataFromTags, Courses::where('id', $tag->id));
+            foreach($tags as $tag) {
+                array_push($dataFromTags, Sessions::where('course_id', $tag->course_id));
             }
         }
 
@@ -54,7 +54,7 @@ class HomeController extends Controller
             $item->course_id = Courses::where('id', $item->course_id)->select('label')->get();
             $item->user_id = User::where('id', $item->user_id)->select('firstname', 'lastname')->get();
         }
-        $data = ['allSessions_guest' => $allSessions, 'sessionsForUser' => $sessionsForUser, 'tagsToSend' => $tagsToSend];
+        $data = ['allSessions_guest' => $allSessions, 'sessionsForUser' => $sessionsForUser, 'dataFromTags' => $dataFromTags];
         return view('home')->with($data);
     }
 }

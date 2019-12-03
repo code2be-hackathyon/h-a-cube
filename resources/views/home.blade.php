@@ -49,13 +49,13 @@
                 <div class="card-body">
                     <h3>Quelques cours en relation avec vos centres d'interêts</h3>
                     <div class="row">
-                    @for($i = 0; $i < 6; $i++)
+                    @foreach($dataFromtags as $item)
 
                         <!--Cours proposés en fonction des recherches deja faites par l'utilisateur -->
                             <div class="col-md-4">
                                 <!-- Widget: user widget style 2 -->
                                 <div class="card card-widget widget-user-2">
-                                    <h3 class="widget-user-username">Musique</h3>
+                                    <h3 class="widget-user-username">{{$item->}}</h3>
                                     <h5 class="widget-user-desc">Guitare accord et melodie par J.Heude Lundi 09/11/2019
                                         de 13h à 14h</h5>
                                     <div class="card-footer p-0">
@@ -85,7 +85,7 @@
                                 <!-- /.widget-user -->
                             </div>
 
-                        @endfor
+                        @endforeach
                     </div>
                 </div>
             </div>
