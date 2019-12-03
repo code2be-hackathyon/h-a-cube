@@ -4,8 +4,7 @@
     <list default="true" id="cae07bad-f6b4-4e64-ae61-12eaad42d60a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CourseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CourseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backoffice/themePage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backoffice/themePage.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontoffice/createSession.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontoffice/createSession.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +183,7 @@
       <workItem from="1575220932719" duration="545000" />
       <workItem from="1575297867320" duration="4182000" />
       <workItem from="1575306382622" duration="12662000" />
-      <workItem from="1575390675033" duration="13360000" />
+      <workItem from="1575390675033" duration="13695000" />
     </task>
     <servers />
   </component>

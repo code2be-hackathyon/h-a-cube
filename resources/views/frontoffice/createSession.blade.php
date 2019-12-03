@@ -1,7 +1,7 @@
 @extends('adminlte::page')
 @section('content')
     <?php
-    $courses = \App\Courses::all()
+    $courses = \App\Courses::where('isAccepted', 1);
     ?>
     <section class="content">
         <div class="container-fluid">
@@ -33,7 +33,7 @@
                             </div>
                             <div class="form-group">
                                 <?php //TODO set value as user->id ?>
-                                <input type="hidden" id="user_id" value="{{}}">
+                                <input type="hidden" id="user_id" value="{{Auth::user()->id}}">
                             </div>
                             <div class="form-group">
                                 <label for="title">Titre</label>
