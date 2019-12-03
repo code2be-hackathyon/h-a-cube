@@ -9,6 +9,7 @@ use App\UserTags;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
+use phpDocumentor\Reflection\Types\Object_;
 
 class HomeController extends Controller
 {
@@ -40,15 +41,12 @@ class HomeController extends Controller
             }
             $tagsForUser = UserTags::where('user_id', Auth::user()->id);
             foreach($tagsForUser as $tag) {
-                $dataFromTags->test = 'Test';
+                array_push($tagsToSend, Arr::random($tagsForUser));
             }
-            // TODO handle randomize tags
-//            foreach($tagsForUser as $tag) {
-//                array_push($tagsToSend, Arr::random($tagsForUser));
-//            }
-//            foreach($tagsToSend as $tag) {
-//                $dataFromTags += array([]);
-//            }
+            // TODO test with real data
+            foreach($tagsToSend as $tag) {
+                array_push($dataFromTags, Courses::where('id', $tag->id));
+            }
         }
 
         $allSessions = Sessions::all();
