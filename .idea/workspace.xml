@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cae07bad-f6b4-4e64-ae61-12eaad42d60a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/ScoreReference.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/UserScore.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/UserTags.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ScoreReference.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/ScoreReference.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/UserScore.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/UserScore.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/UserTags.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/UserTags.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +185,7 @@
       <workItem from="1575220932719" duration="545000" />
       <workItem from="1575297867320" duration="4182000" />
       <workItem from="1575306382622" duration="12662000" />
-      <workItem from="1575390675033" duration="6279000" />
+      <workItem from="1575390675033" duration="6869000" />
     </task>
     <servers />
   </component>

@@ -4,7 +4,9 @@
 namespace App;
 
 
-class ScoreReference
+use Illuminate\Database\Eloquent\Model;
+
+class ScoreReference extends Model
 {
     protected $table = "score_reference";
 }
