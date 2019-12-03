@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUsertypesTable extends Migration
+class CreateScoreReferenceTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateUsertypesTable extends Migration
      */
     public function up()
     {
-        Schema::create('usertypes', function (Blueprint $table) {
-            $table->integerIncrements('id');
-            $table->string('label');
-            $table->timestamps();
+        Schema::create('score_reference', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->integer('level');
+            $table->integer('reference_score');
         });
     }
 
@@ -27,6 +27,6 @@ class CreateUsertypesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('usertypes');
+        Schema::dropIfExists('score_reference');
     }
 }
