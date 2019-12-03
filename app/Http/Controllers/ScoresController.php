@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Courses;
 use App\Scores;
 use Illuminate\Http\Request;
 
@@ -10,6 +11,12 @@ class ScoresController extends Controller
     public function index()
     {
         return Scores::all();
+    }
+
+    public function themePage()
+    {
+        $data = Courses::where('isAccepted', 0);
+        return view('backoffice/themePage')->with('data', $data);
     }
 
     public function show(Scores $scores)

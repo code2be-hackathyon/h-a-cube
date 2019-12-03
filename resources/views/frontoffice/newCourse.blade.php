@@ -1,9 +1,6 @@
 @extends('adminlte::page')
 
 @section('content')
-    <?php
-    ?>
-
     <section class="content">
         <div class="container-fluid">
             <!-- COLOR PALETTE -->

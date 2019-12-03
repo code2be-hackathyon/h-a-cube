@@ -195,6 +195,11 @@ return [
             'url'        => 'sessionList',
             'icon'       => 'fas fa-fw fa-list'
         ],
+        [
+            'text'       => 'Admin - Gérer les demandes de thème',
+            'url'        => 'themePage',
+            'icon'       => 'fas fa-fw fa-list'
+        ],
         ['header' => 'PARAMETRES DU COMPTE'],
         [
             'text' => 'Profil',
