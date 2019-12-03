@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cae07bad-f6b4-4e64-ae61-12eaad42d60a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/ScoreReference.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/UserScore.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/UserTags.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_30_152800_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_30_152800_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +186,7 @@
       <workItem from="1575220932719" duration="545000" />
       <workItem from="1575297867320" duration="4182000" />
       <workItem from="1575306382622" duration="12662000" />
-      <workItem from="1575390675033" duration="4133000" />
+      <workItem from="1575390675033" duration="6279000" />
     </task>
     <servers />
   </component>
@@ -222,10 +226,10 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state width="879" height="275" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1575302141223" />
-    <state x="589" y="367" width="897" height="380" key="NewPhpClassDialog" timestamp="1575394529368">
+    <state x="589" y="367" width="897" height="380" key="NewPhpClassDialog" timestamp="1575397741725">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="589" y="367" width="897" height="380" key="NewPhpClassDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1575394529368" />
+    <state x="589" y="367" width="897" height="380" key="NewPhpClassDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1575397741725" />
     <state x="484" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1575390743848">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
