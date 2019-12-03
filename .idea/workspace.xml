@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cae07bad-f6b4-4e64-ae61-12eaad42d60a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/database/migrations/2019_12_03_165643_create_user_tags_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2019_12_03_170121_create_userscore_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/adminlte.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/adminlte.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +182,8 @@
       <workItem from="1575216831545" duration="231000" />
       <workItem from="1575220932719" duration="545000" />
       <workItem from="1575297867320" duration="4182000" />
-      <workItem from="1575306382622" duration="12394000" />
+      <workItem from="1575306382622" duration="12662000" />
+      <workItem from="1575390675033" duration="1137000" />
     </task>
     <servers />
   </component>
@@ -227,10 +227,10 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="589" y="367" width="801" height="380" key="NewPhpClassDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1575310314875" />
-    <state x="484" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1575306505440">
+    <state x="484" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1575390743848">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="484" y="188" width="1022" height="737" key="SettingsEditor/70.27.1850.1053@70.27.1850.1053" timestamp="1575306505440" />
+    <state x="484" y="188" width="1022" height="737" key="SettingsEditor/70.27.1850.1053@70.27.1850.1053" timestamp="1575390743848" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1575120742941">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
