@@ -11,8 +11,8 @@ class IsAdmin
     /**
      * Handle an incoming request.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Closure  $next
+     * @param \Illuminate\Http\Request $request
+     * @param \Closure $next
      * @return mixed
      */
     public function handle($request, Closure $next)
@@ -38,9 +38,13 @@ class IsAdmin
 //        $user->isAllowedToCreateCourse = 1;
 //        $user->save();
 
-        if (Auth::user()->usertype_id == 1) {
-            return $next($request);
+        if (Auth::check()) {
+            if (Auth::user()->usertype_id == 1) {
+                return $next($request);
+            }
+            return response()->view('error_401', [], 401);
+        } else {
+            return response()->view('auth/login');
         }
-        return response()->view('error_401', [], 401);
     }
 }
