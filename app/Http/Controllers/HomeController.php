@@ -47,6 +47,10 @@ class HomeController extends Controller
             foreach($tags as $tag) {
                 array_push($dataFromTags, Sessions::where('course_id', $tag->course_id));
             }
+            foreach($dataFromTags as $session) {
+                $session->course_id = Courses::where('id', $session->course_id)->select('label')->get();
+                $session->user_id = User::where('id', $session->user_id)->select('firstname', 'lastname')->get();
+            }
         }
 
         $allSessions = Sessions::all();

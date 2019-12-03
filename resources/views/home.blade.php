@@ -49,15 +49,15 @@
                 <div class="card-body">
                     <h3>Quelques cours en relation avec vos centres d'interêts</h3>
                     <div class="row">
-                    @foreach($dataFromtags as $item)
+                    @foreach($dataFromTags as $session)
 
                         <!--Cours proposés en fonction des recherches deja faites par l'utilisateur -->
                             <div class="col-md-4">
                                 <!-- Widget: user widget style 2 -->
                                 <div class="card card-widget widget-user-2">
-                                    <h3 class="widget-user-username">{{$item->}}</h3>
-                                    <h5 class="widget-user-desc">Guitare accord et melodie par J.Heude Lundi 09/11/2019
-                                        de 13h à 14h</h5>
+                                    <h3 class="widget-user-username">{{$session->course_id}}</h3>
+                                    <h5 class="widget-user-desc">{{$session->title}} par {{$session->user_id}} le {{$session->date}}
+                                        de {{$session->startedHour}} à {{$session->endedHour}}</h5>
                                     <div class="card-footer p-0">
                                         <ul class="nav flex-column">
 
