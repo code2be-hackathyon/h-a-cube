@@ -19,8 +19,7 @@ class CreateEtablissementsTable extends Migration
             $table->string('address');
             $table->string('city');
             $table->string('zipCode');
-            $table->dateTime('created_at');
-            $table->dateTime('updated_at');
+            $table->timestamps();
         });
     }
 

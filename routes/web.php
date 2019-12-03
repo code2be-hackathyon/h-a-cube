@@ -15,9 +15,7 @@
 use App\Sessions;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/home', function () {
-    return view('home');
-})->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['middleware' => 'isAuthorized'], function () {
 

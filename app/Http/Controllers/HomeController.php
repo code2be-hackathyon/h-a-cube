@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Courses;
+use App\Sessions;
+use App\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -13,7 +16,6 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
     }
 
     /**
@@ -23,6 +25,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $allSessions = Sessions::all();
+        foreach($allSessions as $item) {
+            $item->course_id = Courses::where('id', $item->course_id)->select('label')->get();
+            $item->user_id = User::where('id', $item->user_id)->select('firstname', 'lastname')->get();
+        }
+
+        return view('home')->with('allSessions_guest', $allSessions);
     }
 }

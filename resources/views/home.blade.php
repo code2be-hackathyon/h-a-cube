@@ -1,27 +1,20 @@
 @extends('adminlte::page')
 
 @section('content')
-    <?php //TODO change
-    ?>
     @if(false)
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <div class="card">
-                        <div class="card-header">Dashboard backoffice</div>
+                        <div class="card-header"><h3 class="card-title">Dashboard administrateur</h3></div>
 
-                        <div class="card-body">
-                            @if (session('status'))
-                                <div class="alert alert-success" role="alert">
-                                    {{ session('status') }}
-                                </div>
-                            @endif
-                        </div>
+                        <div class="card-body">Test</div>
                     </div>
                 </div>
             </div>
         </div>
     @else
+        @if(Auth::check())
         <div class="card">
             <div class="card-body">
                 <h3> N'oubliez pas vos cours déja insrits </h3>
@@ -31,7 +24,7 @@
                         <th>Date</th>
                         <th>Cours</th>
                         <th>Professeur</th>
-                        <th >Salle</th>
+                        <th>Salle</th>
                         <th>Niveau</th>
                     </tr>
                     </thead>
@@ -103,10 +96,45 @@
                 </div>
             </div>
         </div>
+    @else
 
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3> Vous n'êtes pas connecté(e), voici la liste des cours les plus récents : </h3>
+                                <table class="table table-bordered">
+                                    <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Cours</th>
+                                        <th>Professeur</th>
+                                        <th>Salle</th>
+                                        <th>Niveau</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    @foreach($allSessions_guest as $item)
+                                    <tr>
+                                        <td>{{$item->date.' à '.$item->startedHour.'-'.$item->endedHour}}</td>
+                                        <td>{{$item->title}}</td>
+                                        <td> {{$îtem->user_id->firstname.' '.$item->user_id->lastname}}</td>
+                                        <td><span class="badge bg-danger">{{$item->room}}</span></td>
+                                        @foreach($allSessions_guest->difficulty as $dif)
+                                        <td> <i class="fas fa-star"></i></td>
+                                         @endforeach
+                                    </tr>
+                                     @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="card-footer">Envie de vous inscrire à un de ces cours ? Inscrivez-vous sur le site sans plus tarder !</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-
-
-
+    @endif
 @endif
 @endsection
