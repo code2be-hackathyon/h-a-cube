@@ -24,9 +24,9 @@ class CreateUsersTable extends Migration
             $table->integer('usertype_id')->unsigned();
             $table->foreign('usertype_id')->references('id')->on('usertypes');
             $table->string('phone');
-            $table->integer('etablissement_id')->unsigned();
-            $table->foreign('etablissement_id')->references('id')->on('etablissements');
+            $table->integer('etablissement_id')->unsigned()->nullable();
             $table->boolean('isAllowedToCreateCourse');
+            $table->boolean('isAllowedToJoinCourse');
             $table->rememberToken();
             $table->timestamps();
         });
