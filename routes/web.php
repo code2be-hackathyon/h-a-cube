@@ -32,6 +32,8 @@ Route::group(['middleware' => 'isAuthorized'], function () {
 
     Route::get('profile', 'UserController@profile');
 
+    Route::post('newCourse/send', 'CourseController@send')->name('newCourse');
+
 });
 
 
@@ -44,4 +46,3 @@ Route::group(['middleware' => 'isAdmin'], function () {
     Route::get('themePage', 'CourseController@themePage');
 });
 
-Route::post('newCourse/send', 'CourseController@send')->name('newCourse');

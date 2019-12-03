@@ -191,7 +191,7 @@ return [
         ],
         ['header' => 'COIN DES ADMINS'],
         [
-            'text'       => 'Admin - Liste des sessions',
+            'text'       => 'Admin - Liste des ateliers',
             'url'        => 'sessionList',
             'icon'       => 'fas fa-fw fa-list'
         ],

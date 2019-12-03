@@ -13,12 +13,6 @@ class ScoresController extends Controller
         return Scores::all();
     }
 
-    public function themePage()
-    {
-        $data = Courses::where('isAccepted', 0);
-        return view('backoffice/themePage')->with('data', $data);
-    }
-
     public function show(Scores $scores)
     {
         return $scores;

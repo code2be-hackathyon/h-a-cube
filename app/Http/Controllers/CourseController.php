@@ -25,6 +25,12 @@ class CourseController extends Controller
         return view('frontoffice/newCourse');
     }
 
+    public function themePage()
+    {
+        $data = Courses::where('isAccepted', 0);
+        return view('backoffice/themePage')->with('data', $data);
+    }
+
     public function getAll()
     {
         return Courses::all();
