@@ -20,16 +20,19 @@
                             <th>Actions</th>
                         </tr>
                         </thead>
+                        <tbody>
                         @foreach ($data as $item)
-                            <tbody>
                             <td>{{$item->label}}</td>
                             <td>
-                                <a href="{{ route('sessionDetails', ['id'=> $item->id ]) }}">
-                                    <button type="submit" class="btn btn-block btn-warning">Détails</button>
+                                <a href="{{ route('acceptTheme/send', ['id'=> $item->id ]) }}">
+                                    <button type="submit" class="btn btn-block btn-success">Accepter</button>
+                                </a>
+                                <a href="{{ route('refuseTheme/send', ['id'=> $item->id ]) }}">
+                                    <button type="submit" class="btn btn-block btn-warning">Refuser</button>
                                 </a>
                             </td>
-                            </tbody>
                         @endforeach
+                        </tbody>
                     </table>
                 </div>
             </div>
