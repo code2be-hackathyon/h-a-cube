@@ -25,6 +25,7 @@ class CreateSessionsTable extends Migration
             $table->integer('nbMaxUsers');
             $table->integer('difficulty');
             $table->string('room');
+            $table->boolean('isAccepted');
             $table->timestamps();
 
         });
