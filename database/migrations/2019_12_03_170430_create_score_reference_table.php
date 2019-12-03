@@ -17,6 +17,7 @@ class CreateScoreReferenceTable extends Migration
             $table->bigIncrements('id');
             $table->integer('level');
             $table->integer('reference_score');
+            $table->timestamps();
         });
     }
 

@@ -15,10 +15,9 @@ class CreateUserTagsTable extends Migration
     {
         Schema::create('user_tags', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->datetime('created_at');
-            $table->datetime('updated_at');
             $table->integer('course_id')->unsigned();
             $table->integer('user_id')->unsigned();
+            $table->timestamps();
         });
     }
 

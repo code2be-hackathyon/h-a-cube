@@ -18,6 +18,7 @@ class CreateStudentpoolsTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->integer('session_id')->unsigned();
             $table->integer('note');
+            $table->timestamps();
         });
     }
 
