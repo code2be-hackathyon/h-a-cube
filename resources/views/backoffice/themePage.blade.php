@@ -22,15 +22,17 @@
                         </thead>
                         <tbody>
                         @foreach ($data as $item)
+                            <tr>
                             <td>{{$item->label}}</td>
                             <td>
-                                <a href="{{ route('acceptTheme/send', ['id'=> $item->id ]) }}">
-                                    <button type="submit" class="btn btn-block btn-success">Accepter</button>
+                                <a href="{{ route('acceptTheme', ['id'=> $item->id ]) }}">
+                                    <button type="submit" class="btn btn-block btn-success col-md-4">Accepter</button>
                                 </a>
-                                <a href="{{ route('refuseTheme/send', ['id'=> $item->id ]) }}">
-                                    <button type="submit" class="btn btn-block btn-warning">Refuser</button>
+                                <a href="{{ route('refuseTheme', ['id'=> $item->id ]) }}">
+                                    <button type="submit" class="btn btn-block btn-warning col-md-4">Refuser</button>
                                 </a>
                             </td>
+                            </tr>
                         @endforeach
                         </tbody>
                     </table>

@@ -27,20 +27,20 @@ class CourseController extends Controller
 
     public function themePage()
     {
-        $data = Courses::where('isAccepted', 0);
+        $data = Courses::where('isAccepted', 0)->get();
         return view('backoffice/themePage')->with('data', $data);
     }
 
     public function acceptTheme(Request $request)
     {
         Courses::where('id', $request->id)->update(['isAccepted' => 1]);
-        return view('home');
+        return $this->themePage();
     }
 
     public function refuseTheme(Request $request)
     {
         Courses::where('id', $request->id)->update(['isAccepted' => 2]);
-        return view('home');
+        return view('backoffice/themePage');
     }
 
     public function getAll()
