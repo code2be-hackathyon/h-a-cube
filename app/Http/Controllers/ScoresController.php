@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Courses;
 use App\Scores;
+use App\Studentpools;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ScoresController extends Controller
 {
@@ -35,5 +37,12 @@ class ScoresController extends Controller
     public function delete(Scores $scores)
     {
         $scores->delete();
+    }
+
+    public function vote(Request $request)
+    {
+        $homeController = new HomeController;
+        Studentpools::where('session_id', $request->id)->where('user_id', Auth::user()->id)->update(['note' => $request->note]);
+        return $homeController->index();
     }
 }

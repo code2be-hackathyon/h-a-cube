@@ -4,9 +4,12 @@
     <list default="true" id="cae07bad-f6b4-4e64-ae61-12eaad42d60a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/adminlte.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/adminlte.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ScoresController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ScoresController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SessionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SessionController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/frontoffice/createSession.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontoffice/createSession.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontoffice/search.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontoffice/search.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +191,7 @@
       <workItem from="1575390675033" duration="13849000" />
       <workItem from="1575407710828" duration="44000" />
       <workItem from="1575458401207" duration="1694000" />
-      <workItem from="1575476729010" duration="693000" />
+      <workItem from="1575476729010" duration="18101000" />
     </task>
     <servers />
   </component>
@@ -228,10 +231,10 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state width="879" height="275" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1575302141223" />
-    <state x="589" y="367" width="897" height="380" key="NewPhpClassDialog" timestamp="1575397741725">
+    <state x="589" y="367" width="897" height="380" key="NewPhpClassDialog" timestamp="1575499426903">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="589" y="367" width="897" height="380" key="NewPhpClassDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1575397741725" />
+    <state x="589" y="367" width="897" height="380" key="NewPhpClassDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1575499426903" />
     <state x="484" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1575390743848">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>

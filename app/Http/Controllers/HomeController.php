@@ -36,41 +36,49 @@ class HomeController extends Controller
         $dataFromTags = [];
 
         if (Auth::check()) {
-            $sessionsForUser = Sessions::where('id', Auth::user()->id);
-            foreach($sessionsForUser as $item) {
-                $item->course_id = Courses::where('id', $item->course_id)->select('label')->get();
+            // Les sessions auxquelles l'user connecté est inscrit
+            $studentPoolForUser = Studentpools::where('user_id', Auth::user()->id)->where('note', null)->select('session_id')->first();
+            $sessionsForUser = Sessions::where('id', $studentPoolForUser->session_id)->where('date', '>', date('Y-m-d'))->get();
+            foreach ($sessionsForUser as $item) {
+                $item->courses_id = Courses::where('id', $item->courses_id)->select('label')->get();
                 $item->user_id = User::where('id', $item->user_id)->select('firstname', 'lastname')->get();
             }
             $tagsForUser = UserTags::where('user_id', Auth::user()->id);
-            foreach($tagsForUser as $tag) {
+            foreach ($tagsForUser as $tag) {
                 array_push($tags, Arr::random($tagsForUser));
             }
-            // TODO test with real data
-            foreach($tags as $tag) {
-                array_push($dataFromTags, Sessions::where('course_id', $tag->course_id));
+            foreach ($tags as $tag) {
+                array_push($dataFromTags, Sessions::where('courses_id', $tag->course_id));
             }
-            foreach($dataFromTags as $session) {
-                $session->course_id = Courses::where('id', $session->course_id)->select('label')->get();
+            foreach ($dataFromTags as $session) {
+                $session->courses_id = Courses::where('id', $session->courses_id)->select('label')->get();
                 $session->user_id = User::where('id', $session->user_id)->select('firstname', 'lastname')->get();
             }
         }
 
         $allSessions = Sessions::all();
-        foreach($allSessions as $item) {
-            $item->course_id = Courses::where('id', $item->course_id)->select('label')->get();
+        foreach ($allSessions as $item) {
+            $item->courses_id = Courses::where('id', $item->courses_id)->select('label')->get();
             $item->user_id = User::where('id', $item->user_id)->select('firstname', 'lastname')->get();
         }
         $data = ['allSessions_guest' => $allSessions, 'sessionsForUser' => $sessionsForUser, 'dataFromTags' => $dataFromTags, 'sessionToVote' => $sessionToVote];
         return view('home')->with($data);
     }
 
-    private function checkPastSessions () {
+    private function checkPastSessions()
+    {
 
         if (Auth::check()) {
-            $studentVote = Studentpools::where('user_id', Auth::user()->id)->where('note', null)->max('id');
-            if($studentVote) {
-                return $studentVote;
+            $studentVote = Studentpools::where('user_id', Auth::user()->id)->where('note', null)->get();
+            if (!$studentVote->isEmpty()) {
+                $sessionToVote = Sessions::where('id', $studentVote[0]->session_id)->where('date', '<', date('Y-m-d'))->get();
+                foreach ($sessionToVote as $session) {
+                    $session->courses_id = Courses::where('id', $session->courses_id)->select('label')->get();
+                    $session->user_id = User::where('id', $session->user_id)->select('firstname', 'lastname')->get();
+                    return $sessionToVote;
+                }
             }
+
         }
         return '';
 

@@ -12,7 +12,8 @@ class SessionController extends Controller
 {
     public function index()
     {
-        return view('frontoffice/createSession');
+        $data = Courses::where('isAccepted', 1)->get();
+        return view('frontoffice/createSession')->with('data', $data);
     }
 
     public function search()
@@ -81,5 +82,24 @@ class SessionController extends Controller
 
         return view('frontoffice/createSession');
 
+    }
+
+    public static function getCourseLabelById($id)
+    {
+        $test =   DB::table('courses')->select('label')->where('id','=',$id)->get();
+        return $test;
+    }
+
+    public static function getProfessorFirstName($user_id)
+    {
+        $test =   DB::table('users')->select('firstname')->where('id','=',$user_id)->get();
+        return $test;
+    }
+
+    public static function getProfessorLastName($user_id)
+    {
+
+        $test2 =   DB::table('users')->select('lastname')->where('id','=',$user_id)->get();
+        return $test2;
     }
 }

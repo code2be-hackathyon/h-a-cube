@@ -34,6 +34,8 @@ Route::group(['middleware' => 'isAuthorized'], function () {
 
     Route::post('newCourse/send', 'CourseController@send')->name('newCourse');
 
+    Route::get('voteForSession', 'ScoresController@vote')->name('voteForSession');
+
 });
 
 

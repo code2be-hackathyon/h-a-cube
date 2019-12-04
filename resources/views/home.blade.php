@@ -15,12 +15,29 @@
         </div>
     @else
         @if(Auth::check())
-            @php(//TODO finish modal) @endphp
-            @if($sessionToVote)
-                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-default">
-                    Launch Default Modal
-                </button>
-            @endif
+
+            <div class="modal fade" id="modal-default">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Default Modal</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>One fine body&hellip;</p>
+                        </div>
+                        <div class="modal-footer justify-content-between">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+            <!-- /.modal -->
             <div class="card">
                 <div class="card-body">
                     <h3> N'oubliez pas vos cours déja insrits </h3>
@@ -39,11 +56,13 @@
                             <tr>
                                 <td>{{$item->date.' à '.$item->startedHour.'-'.$item->endedHour}}</td>
                                 <td>{{$item->title}}</td>
-                                <td> {{$îtem->user_id->firstname.' '.$item->user_id->lastname}}</td>
+                                <td> {{$item->user_id[0]->firstname.' '.$item->user_id[0]->lastname}}</td>
                                 <td><span class="badge bg-danger">{{$item->room}}</span></td>
-                                @foreach($allSessions_guest->difficulty as $dif)
-                                    <td><i class="fas fa-star"></i></td>
-                                @endforeach
+                                <td>
+                                @for($i = 0; $i < $item->difficulty; $i++)
+                                    <i class="fas fa-star"></i>
+                                @endfor
+                                </td>
                             </tr>
                         @endforeach
                         </tbody>
@@ -62,7 +81,8 @@
                                 <!-- Widget: user widget style 2 -->
                                 <div class="card card-widget widget-user-2">
                                     <h3 class="widget-user-username">{{$session->course_id}}</h3>
-                                    <h5 class="widget-user-desc">{{$session->title}} par {{$session->user_id}} le {{$session->date}}
+                                    <h5 class="widget-user-desc">{{$session->title}} par {{$session->user_id}}
+                                        le {{$session->date}}
                                         de {{$session->startedHour}} à {{$session->endedHour}}</h5>
                                     <div class="card-footer p-0">
                                         <ul class="nav flex-column">
@@ -95,6 +115,42 @@
                     </div>
                 </div>
             </div>
+            @if($sessionToVote)
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <h3> N'oubliez pas de noter ces cours </h3>
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Titre</th>
+                                    <th>Thème</th>
+                                    <th>Date</th>
+                                    <th>Note (de 1 à 5)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                @foreach($sessionToVote as $item)
+                                    <tr>
+                                        <td>{{$item->title}}</td>
+                                        <td>{{$item->courses_id[0]->label}}</td>
+                                        <td>{{$item->date.' à '.$item->startedHour.'-'.$item->endedHour}}</td>
+                                        <td>
+                                            <form role="form" method="GET" action="{{route('voteForSession')}}">
+                                                @csrf
+                                                <input type="hidden" name="id" id="id" value="{{$item->id}}"/>
+                                                <input type="number" max="5" min="1" value="1" name="note" id="note"/>
+                                                <button type="submit">Voter</button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            @endif
         @else
 
             <div class="container">
@@ -118,11 +174,13 @@
                                         <tr>
                                             <td>{{$item->date.' à '.$item->startedHour.'-'.$item->endedHour}}</td>
                                             <td>{{$item->title}}</td>
-                                            <td> {{$îtem->user_id->firstname.' '.$item->user_id->lastname}}</td>
+                                            <td> {{$item->user_id[0]->firstname.' '.$item->user_id[0]->lastname}}</td>
                                             <td><span class="badge bg-danger">{{$item->room}}</span></td>
-                                            @foreach($allSessions_guest->difficulty as $dif)
-                                                <td><i class="fas fa-star"></i></td>
-                                            @endforeach
+                                            <td>
+                                            @for($i = 0; $i < $item->difficulty; $i++)
+                                                <i class="fas fa-star"></i>
+                                            @endfor
+                                            </td>
                                         </tr>
                                     @endforeach
                                     </tbody>
@@ -138,4 +196,14 @@
 
         @endif <!-- If user is a guest -->
     @endif
+@endsection
+
+@section('scripts')
+
+    <script>
+        $(function () {
+            $('#modal').modal('show');
+        });
+    </script>
+
 @endsection

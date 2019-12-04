@@ -21,12 +21,10 @@
                             <div class="form-group">
                                 <label for="course_id">Type de cours</label>
                                 <select class="form-control" id="course_id" name="course_id">
-                                    <?php $number = 1;
-                                    foreach($courses as $course)
-                                    {?>
-                                    <option id="<?= $number ?>"><?=$course->label?></option>
-                                    <?php
-                                    } ?>
+                                    @foreach($data as $item)
+                                        <option id="{{$item->id}}">{{$item->label}}</option>
+                                    @endforeach
+
                                 </select>
 
 
@@ -40,7 +38,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="date">Date</label>
-                                <input type="date" class="form-control" id="date" name="date" required >
+                                <input type="date" class="form-control" id="date" name="date" required>
                             </div>
                             <div class="form-group">
                                 <label for="startedHour">Heure de début</label>
@@ -52,15 +50,18 @@
                             </div>
                             <div class="form-group">
                                 <label for="description">Description</label>
-                                <textarea class="form-control" id="description" name="description" cols="40" rows="5" required></textarea>
+                                <textarea class="form-control" id="description" name="description" cols="40" rows="5"
+                                          required></textarea>
                             </div>
                             <div class="form-group">
                                 <label for="nbMaxUsers">Nombre max de personnes</label>
-                                <input type="number" class="form-control" id="nbMaxUsers" name="nbMaxUsers" min="1" required>
+                                <input type="number" class="form-control" id="nbMaxUsers" name="nbMaxUsers" min="1"
+                                       required>
                             </div>
                             <div class="form-group" id="difficulty_div">
                                 <label for="difficulty">Difficulté</label>
-                                <input type="number" class="form-control" id="difficulty" name="difficulty" min="1" max="5"
+                                <input type="number" class="form-control" id="difficulty" name="difficulty" min="1"
+                                       max="5"
                                        onchange="
                                            // const difficulty_div = document.getElementById('difficulty_div');
                                            // const value = document.getElementById('difficulty').value;
