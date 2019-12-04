@@ -32,7 +32,6 @@
 
                             </div>
                             <div class="form-group">
-                                <?php //TODO set value as user->id ?>
                                 <input type="hidden" id="user_id" value="{{Auth::user()->id}}">
                             </div>
                             <div class="form-group">

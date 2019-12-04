@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Courses;
 use App\Sessions;
+use App\Studentpools;
 use App\User;
 use App\UserTags;
 use Illuminate\Http\Request;
@@ -29,6 +30,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $sessionToVote = $this->checkPastSessions();
         $sessionsForUser = new Sessions();
         $tags = [];
         $dataFromTags = [];
@@ -58,7 +60,19 @@ class HomeController extends Controller
             $item->course_id = Courses::where('id', $item->course_id)->select('label')->get();
             $item->user_id = User::where('id', $item->user_id)->select('firstname', 'lastname')->get();
         }
-        $data = ['allSessions_guest' => $allSessions, 'sessionsForUser' => $sessionsForUser, 'dataFromTags' => $dataFromTags];
+        $data = ['allSessions_guest' => $allSessions, 'sessionsForUser' => $sessionsForUser, 'dataFromTags' => $dataFromTags, 'sessionToVote' => $sessionToVote];
         return view('home')->with($data);
+    }
+
+    private function checkPastSessions () {
+
+        if (Auth::check()) {
+            $studentVote = Studentpools::where('user_id', Auth::user()->id)->where('note', null)->max('id');
+            if($studentVote) {
+                return $studentVote;
+            }
+        }
+        return '';
+
     }
 }

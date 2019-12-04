@@ -15,6 +15,12 @@
         </div>
     @else
         @if(Auth::check())
+            @php(//TODO finish modal) @endphp
+            @if($sessionToVote)
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-default">
+                    Launch Default Modal
+                </button>
+            @endif
             <div class="card">
                 <div class="card-body">
                     <h3> N'oubliez pas vos cours déja insrits </h3>
