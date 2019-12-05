@@ -26,12 +26,22 @@
                             </div>
                         </div>
                         <div id="footer">
-                            <button type="submit" class="btn btn-warning">Envoyer</button>
+                            <button type="submit" class="btn btn-warning toastsDefaultSuccess">Envoyer</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </section>
-
+@endsection
+@section('js')
+    <script>
+        $('.toastsDefaultSuccess').click(function() {
+            $(document).Toasts('create', {
+                class: 'bg-success',
+                title: 'Succès',
+                body: 'Votre proposition de thème a bien été prise en compte'
+            })
+        });
+    </script>
 @endsection

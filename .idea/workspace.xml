@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="cae07bad-f6b4-4e64-ae61-12eaad42d60a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/adminlte.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/adminlte.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/frontoffice/createSession.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontoffice/createSession.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontoffice/newCourse.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontoffice/newCourse.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +193,7 @@
       <workItem from="1575550120325" duration="2757000" />
       <workItem from="1575553566389" duration="39000" />
       <workItem from="1575553607847" duration="1433000" />
-      <workItem from="1575556468444" duration="3954000" />
+      <workItem from="1575556468444" duration="4073000" />
     </task>
     <servers />
   </component>

@@ -79,7 +79,7 @@
             $(document).Toasts('create', {
                 class: 'bg-success',
                 title: 'Succès',
-                body: 'Votre demande d\'atelier a bien été pris en compte'
+                body: 'Votre demande d\'atelier a bien été prise en compte'
             })
         });
     </script>
