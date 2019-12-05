@@ -5,8 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SessionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SessionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backoffice/sessionDetails.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backoffice/sessionDetails.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +187,7 @@
       <workItem from="1575390675033" duration="13849000" />
       <workItem from="1575407710828" duration="44000" />
       <workItem from="1575458401207" duration="1694000" />
-      <workItem from="1575476729010" duration="26005000" />
+      <workItem from="1575476729010" duration="26400000" />
     </task>
     <servers />
   </component>
@@ -203,10 +202,10 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="784" y="241" width="412" height="631" key="#com.intellij.ide.util.MemberChooser/70.27.1850.1053@70.27.1850.1053" timestamp="1575310095994" />
-    <state x="1190" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1575310124068">
+    <state x="1190" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1575510870619">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="1190" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1575310124068" />
+    <state x="1190" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1575510870619" />
     <state x="190" y="311" width="374" height="505" key="FileChooserDialogImpl" timestamp="1575507635014">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>

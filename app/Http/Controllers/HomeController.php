@@ -60,7 +60,7 @@ class HomeController extends Controller
                 array_push($tags, Arr::random($tagsForUser));
             }
             foreach ($tags as $tag) {
-                array_push($dataFromTags, Sessions::where('courses_id', $tag->course_id));
+                array_push($dataFromTags, Sessions::where('courses_id', $tag->courses_id));
             }
             foreach ($dataFromTags as $session) {
                 $session->courses_id = Courses::where('id', $session->courses_id)->select('label')->get();

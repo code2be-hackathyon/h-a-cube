@@ -19,19 +19,19 @@
                         <div class="card-body">
                             <div class="form-group">
                                 <label for="course_id">Type de cours</label>
-                                <input type="text" readonly class="form-control" id="course_id">
+                                <input type="text" readonly class="form-control" id="courses_id" value="{{$data->courses_id[0]->label}}">
                             </div>
                             <div class="form-group">
                                 <label for="date">Date</label>
-                                <input type="date" readonly class="form-control" id="date">
+                                <input type="date" readonly class="form-control" id="date" value="{{$data->date}}">
                             </div>
                             <div class="form-group">
                                 <label for="description">Description</label>
-                                <textarea class="form-control" readonly id="description" cols="40" rows="5"></textarea>
+                                <textarea class="form-control" readonly id="description" cols="40" rows="5" v-html="{{$data->description}}"></textarea>
                             </div>
                             <div class="form-group">
                                 <label for="nbMaxUsers">Nombre max de personnes</label>
-                                <input type="number" class="form-control" readonly id="nbMaxUsers" min="1">
+                                <input type="number" class="form-control" readonly id="nbMaxUsers" min="1" value="{{$data->nbMaxUsers}}">
                             </div>
                             <div class="form-group" id="difficulty_div">
                                 <label for="difficulty">Difficulté</label>

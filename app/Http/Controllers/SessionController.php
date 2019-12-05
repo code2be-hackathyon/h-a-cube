@@ -36,6 +36,9 @@ class SessionController extends Controller
     {
         $session_id = $request->id;
         $data = Sessions::where('id', $session_id)->get();
+        foreach ($data as $item) {
+            $item->courses_id = Courses::where('id', $item->courses_id)->select('label')->get();
+        }
         if (!$data->isEmpty()) {
             return view('backoffice/sessionDetails')->with('data', $data[0]);
         }
@@ -106,11 +109,6 @@ class SessionController extends Controller
 
         return $this->index();
 
-    }
-
-    public function getSessionsForWeek(Request $request)
-    {
-        Sessions::where('date', 'between',  date('Y-m-d'), date(strtotime(date('Y-m-d').date('+7days'))));
     }
 
     public static function getCourseLabelById($id)
