@@ -34,6 +34,8 @@ class HomeController extends Controller
         $sessionsForUser = new Sessions();
         $tags = [];
         $dataFromTags = [];
+        $dataFromDate = Sessions::where('date', (date('Y-m-d ')))->get();
+        $dataFromSession = Sessions::where('isAccepted' , 0)->get();
 
         if (Auth::check()) {
             // Les sessions auxquelles l'user connecté est inscrit
@@ -42,6 +44,14 @@ class HomeController extends Controller
             foreach ($sessionsForUser as $item) {
                 $item->courses_id = Courses::where('id', $item->courses_id)->select('label')->get();
                 $item->user_id = User::where('id', $item->user_id)->select('firstname', 'lastname')->get();
+            }
+            foreach ($dataFromDate as $session){
+                $session->courses_id = Courses::where('id', $session->courses_id)->select('label')->get();
+                $session->user_id = User::where('id', $session->user_id)->select('firstname')->get();
+            }
+            foreach ($dataFromSession as $session){
+                $session->courses_id = Courses::where('id', $session->courses_id)->select('label')->get();
+                $session->user_id = User::where('id', $session->user_id)->select('firstname')->get();
             }
             $tagsForUser = UserTags::where('user_id', Auth::user()->id);
             foreach ($tagsForUser as $tag) {
@@ -61,7 +71,7 @@ class HomeController extends Controller
             $item->courses_id = Courses::where('id', $item->courses_id)->select('label')->get();
             $item->user_id = User::where('id', $item->user_id)->select('firstname', 'lastname')->get();
         }
-        $data = ['allSessions_guest' => $allSessions, 'sessionsForUser' => $sessionsForUser, 'dataFromTags' => $dataFromTags, 'sessionToVote' => $sessionToVote];
+        $data = ['allSessions_guest' => $allSessions, 'sessionsForUser' => $sessionsForUser, 'dataFromTags' => $dataFromTags, 'sessionToVote' => $sessionToVote, 'dataFromDate' => $dataFromDate , 'dataFromSession' => $dataFromSession];
         return view('home')->with($data);
     }
 

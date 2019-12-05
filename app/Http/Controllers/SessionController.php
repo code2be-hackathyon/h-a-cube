@@ -44,9 +44,22 @@ class SessionController extends Controller
 
     public function deleteSession(Request $request)
     {
-        print($request->id);
         Sessions::where('id', $request->id)->delete();
         return $this->showSessionList();
+    }
+
+    public function deleteSessionFromHome(Request $request)
+    {
+        $hc = new HomeController;
+        Sessions::where('id', $request->id)->delete();
+        return $hc->index();
+    }
+
+    public function acceptSession(Request $request)
+    {
+        $hc = new HomeController;
+        Sessions::where('id', $request->id)->update(['isAccepted' => 1]);
+        return $hc->index();
     }
 
     public function show(Sessions $sessions)

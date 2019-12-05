@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="cae07bad-f6b4-4e64-ae61-12eaad42d60a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SessionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SessionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontoffice/search.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontoffice/search.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +128,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/vendor" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Downloads/h-a-cube_v0" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -187,7 +188,7 @@
       <workItem from="1575390675033" duration="13849000" />
       <workItem from="1575407710828" duration="44000" />
       <workItem from="1575458401207" duration="1694000" />
-      <workItem from="1575476729010" duration="22313000" />
+      <workItem from="1575476729010" duration="24694000" />
     </task>
     <servers />
   </component>
@@ -206,10 +207,10 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="1190" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1575310124068" />
-    <state x="190" y="311" width="374" height="505" key="FileChooserDialogImpl" timestamp="1575298809133">
+    <state x="190" y="311" width="374" height="505" key="FileChooserDialogImpl" timestamp="1575507635014">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="190" y="311" width="374" height="505" key="FileChooserDialogImpl/70.27.1850.1053@70.27.1850.1053" timestamp="1575298809133" />
+    <state x="190" y="311" width="374" height="505" key="FileChooserDialogImpl/70.27.1850.1053@70.27.1850.1053" timestamp="1575507635014" />
     <state x="315" y="311" width="424" height="491" key="FileChooserDialogImpl/70.27.3770.1053@70.27.3770.1053" timestamp="1575209140198" />
     <state width="879" height="275" key="GridCell.Tab.0.bottom" timestamp="1575302141223">
       <screen x="70" y="27" width="1850" height="1053" />

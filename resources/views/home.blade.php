@@ -1,16 +1,113 @@
 @extends('adminlte::page')
 
 @section('content')
-    @if(false)
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="card">
-                        <div class="card-header"><h3 class="card-title">Dashboard administrateur</h3></div>
+    @if(Auth::check() && Auth::user()->usertype_id == 1)
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Demande de Session</h3>
 
-                        <div class="card-body">Test</div>
+                        <div class="card-tools">
+                            <div class="input-group input-group-sm" style="width: 150px;">
+
+                            </div>
+                        </div>
                     </div>
+                    <!-- /.card-header -->
+                    <div class="card-body table-responsive p-0" style="height: 300px;">
+                        <table id="exemple1" class="table table-head-fixed">
+                            <thead>
+                            <tr>
+                                <th>Date et Horaires </th>
+                                <th>Animateur</th>
+                                <th>Thème</th>
+                                <th>Description</th>
+                                <th>Accepter</th>
+                                <th>Refuser</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @foreach($dataFromSession as $item)
+                                @if(!$item->isAccepted)
+                                    <tr>
+                                        <!-- /  $dataFromDate = DB::table('sessions')->select('*')->where('date'== (date('Y-m-d ')));
+                                        var_dump($dataFromDate);  -->
+                                        <td>{{$item->date}}</td>
+                                        <td>{{$item->user_id[0]->firstname}}</td>
+                                        <td>{{$item->courses_id[0]->label}}</td>
+                                        <td>{{$item->description}}</td>
+                                        <td>
+                                            <a href="{{ route('acceptSession', ['id'=> $item->id ]) }}">
+                                                <button type="button" class="btn btn-block bg-gradient-warning">Accepter</button>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="{{ route('refuseSession', ['id'=> $item->id ]) }}">
+                                                <button type="button" class="btn btn-block bg-gradient-danger">Refuser</button>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                @endif
+                            @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
                 </div>
+                <!-- /.card -->
+            </div>
+        </div>
+
+
+
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Sessions de cette semaine </h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body table-responsive p-0" style="height: 300px;">
+                        <table class="table table-head-fixed">
+                            <thead>
+                            <tr>
+                                <th>Date et Horaires </th>
+                                <th>Animateur</th>
+                                <th>Thème</th>
+                                <th>Description</th>
+                                <th>Modifier</th>
+                                <th>Annuler</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @foreach($dataFromDate as $item)
+                                @if($item->isAccepted)
+                                    <tr>
+                                        <!-- /  $dataFromDate = DB::table('sessions')->select('*')->where('date'== (date('Y-m-d ')));
+                                        var_dump($dataFromDate);  -->
+                                        <td>{{$item->date}}</td>
+                                        <td>{{$item->user_id}}</td>
+                                        <td>{{$item->courses_id[0]->label}}</td>
+                                        <td>{{$item->description}}</td>
+                                        <td>
+                                            <input type="text" name="table_search" class="form-control float-right" placeholder="Salle">
+                                            <button type="button" class="btn btn-block bg-gradient-warning" > Modifier</button>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-block bg-gradient-danger"> Annuler</button>
+                                        </td>
+                                    </tr>
+                                @endif
+                            @endforeach
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
             </div>
         </div>
     @else
@@ -151,7 +248,6 @@
                 </div>
             @endif
         @else
-
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-8">
@@ -195,14 +291,4 @@
 
         @endif <!-- If user is a guest -->
     @endif
-@endsection
-
-@section('scripts')
-
-    <script>
-        $(function () {
-            $('#modal').modal('show');
-        });
-    </script>
-
 @endsection

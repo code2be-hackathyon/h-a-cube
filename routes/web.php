@@ -49,5 +49,8 @@ Route::group(['middleware' => 'isAdmin'], function () {
     Route::get('themePage/send', 'CourseController@acceptTheme')->name('acceptTheme');
     Route::get('themePage/sendRefuse', 'CourseController@refuseTheme')->name('refuseTheme');
     Route::get('deleteSession', 'SessionController@deleteSession')->name('deleteSession');
+    Route::post('acceptSession', 'SessionController@accepteSession')->name('acceptSession');
+    Route::get('deleteSessionFromHome', 'SessionController@deleteSessionFromHome')->name('refuseSession');
+
 });
 
