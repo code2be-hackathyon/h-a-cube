@@ -80,6 +80,7 @@
                                 <th>Animateur</th>
                                 <th>Thème</th>
                                 <th>Description</th>
+                                <th>Salle</th>
                                 <th>Action</th>
                             </tr>
                             </thead>
@@ -91,6 +92,11 @@
                                         <td>{{$item->user_id[0]->firstname}}</td>
                                         <td>{{$item->courses_id[0]->label}}</td>
                                         <td>{{$item->description}}</td>
+                                        @if($item->room)
+                                            <td>{{$item->room}}</td>
+                                            @else
+                                            <td><small class="badge badge-danger"><i class="far fa-calendar-times"></i> Pas de salle</small></td>
+                                        @endif
                                         <td>
                                             <a href="{{ route('sessionDetails', ['id'=> $item->id ]) }}">
                                                 <button type="submit" class="btn btn-block btn-warning">Détails</button>
@@ -135,17 +141,17 @@
             <div class="card">
                 <div class="card-body">
                     @if(count($sessionsForUser->toArray()) > 0)
-                    <h3> Le dernier cours auquel vous êtes inscrit : </h3>
-                    <table class="table table-bordered">
-                        <thead>
-                        <tr>
-                            <th>Date</th>
-                            <th>Cours</th>
-                            <th>Professeur</th>
-                            <th>Salle</th>
-                            <th>Niveau</th>
-                        </tr>
-                        </thead>
+                        <h3> Le dernier cours auquel vous êtes inscrit : </h3>
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Cours</th>
+                                <th>Professeur</th>
+                                <th>Salle</th>
+                                <th>Niveau</th>
+                            </tr>
+                            </thead>
                             <tbody>
                             @foreach($sessionsForUser as $item)
                                 <tr>
@@ -161,10 +167,10 @@
                                 </tr>
                             @endforeach
                             </tbody>
-                        @else
-                            <h3>Vous n'êtes inscrit à aucun cours</h3>
-                        @endif
-                    </table>
+                            @else
+                                <h3>Vous n'êtes inscrit à aucun cours</h3>
+                            @endif
+                        </table>
                 </div>
             </div>
 
