@@ -25,7 +25,7 @@
                             <tbody>
                                 <td>{{$item->title}}</td>
                                 <td>{{$item->courses_id[0]->label}}</td>
-                                <td>{{$item->date}}</td>
+                                <td>{{date('d/m/Y', strtotime($item->date))}}</td>
                                 <td>{{$item->user_id[0]->firstname.' '.$item->user_id[0]->lastname}}</td>
                                 <td>
                                     <a href="{{ route('sessionDetails', ['id'=> $item->id ]) }}">
