@@ -34,7 +34,9 @@ class HomeController extends Controller
         $sessionsForUser = new Sessions();
         $tags = [];
         $dataFromTags = [];
-        $dataFromDate = Sessions::where('date', (date('Y-m-d ')))->get();
+        $from = date('Y-m-d');
+        $to = date('Y-m-d', strtotime($from.' +7days'));
+        $dataFromDate = Sessions::whereBetween('date', [$from, $to])->get();
         $dataFromSession = Sessions::where('isAccepted' , 0)->get();
 
         if (Auth::check()) {

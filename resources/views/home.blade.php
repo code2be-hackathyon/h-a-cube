@@ -19,7 +19,7 @@
                         <table id="exemple1" class="table table-head-fixed">
                             <thead>
                             <tr>
-                                <th>Date et Horaires </th>
+                                <th>Date et Horaires</th>
                                 <th>Animateur</th>
                                 <th>Thème</th>
                                 <th>Description</th>
@@ -39,12 +39,15 @@
                                         <td>{{$item->description}}</td>
                                         <td>
                                             <a href="{{ route('acceptSession', ['id'=> $item->id ]) }}">
-                                                <button type="button" class="btn btn-block bg-gradient-warning">Accepter</button>
+                                                <button type="button" class="btn btn-block bg-gradient-warning">
+                                                    Accepter
+                                                </button>
                                             </a>
                                         </td>
                                         <td>
                                             <a href="{{ route('refuseSession', ['id'=> $item->id ]) }}">
-                                                <button type="button" class="btn btn-block bg-gradient-danger">Refuser</button>
+                                                <button type="button" class="btn btn-block bg-gradient-danger">Refuser
+                                                </button>
                                             </a>
                                         </td>
                                     </tr>
@@ -73,30 +76,25 @@
                         <table class="table table-head-fixed">
                             <thead>
                             <tr>
-                                <th>Date et Horaires </th>
+                                <th>Date et Horaires</th>
                                 <th>Animateur</th>
                                 <th>Thème</th>
                                 <th>Description</th>
-                                <th>Modifier</th>
-                                <th>Annuler</th>
+                                <th>Action</th>
                             </tr>
                             </thead>
                             <tbody>
                             @foreach($dataFromDate as $item)
                                 @if($item->isAccepted)
                                     <tr>
-                                        <!-- /  $dataFromDate = DB::table('sessions')->select('*')->where('date'== (date('Y-m-d ')));
-                                        var_dump($dataFromDate);  -->
                                         <td>{{$item->date}}</td>
-                                        <td>{{$item->user_id}}</td>
+                                        <td>{{$item->user_id[0]->firstname}}</td>
                                         <td>{{$item->courses_id[0]->label}}</td>
                                         <td>{{$item->description}}</td>
                                         <td>
-                                            <input type="text" name="table_search" class="form-control float-right" placeholder="Salle">
-                                            <button type="button" class="btn btn-block bg-gradient-warning" > Modifier</button>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-block bg-gradient-danger"> Annuler</button>
+                                            <a href="{{ route('sessionDetails', ['id'=> $item->id ]) }}">
+                                                <button type="submit" class="btn btn-block btn-warning">Détails</button>
+                                            </a>
                                         </td>
                                     </tr>
                                 @endif
@@ -155,9 +153,9 @@
                                 <td> {{$item->user_id[0]->firstname.' '.$item->user_id[0]->lastname}}</td>
                                 <td><span class="badge bg-danger">{{$item->room}}</span></td>
                                 <td>
-                                @for($i = 0; $i < $item->difficulty; $i++)
-                                    <i class="fas fa-star"></i>
-                                @endfor
+                                    @for($i = 0; $i < $item->difficulty; $i++)
+                                        <i class="fas fa-star"></i>
+                                    @endfor
                                 </td>
                             </tr>
                         @endforeach
@@ -272,9 +270,9 @@
                                             <td> {{$item->user_id[0]->firstname.' '.$item->user_id[0]->lastname}}</td>
                                             <td><span class="badge bg-danger">{{$item->room}}</span></td>
                                             <td>
-                                            @for($i = 0; $i < $item->difficulty; $i++)
-                                                <i class="fas fa-star"></i>
-                                            @endfor
+                                                @for($i = 0; $i < $item->difficulty; $i++)
+                                                    <i class="fas fa-star"></i>
+                                                @endfor
                                             </td>
                                         </tr>
                                     @endforeach

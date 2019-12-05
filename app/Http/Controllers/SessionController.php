@@ -108,6 +108,11 @@ class SessionController extends Controller
 
     }
 
+    public function getSessionsForWeek(Request $request)
+    {
+        Sessions::where('date', 'between',  date('Y-m-d'), date(strtotime(date('Y-m-d').date('+7days'))));
+    }
+
     public static function getCourseLabelById($id)
     {
         $test =   DB::table('courses')->select('label')->where('id','=',$id)->get();
