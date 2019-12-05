@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="cae07bad-f6b4-4e64-ae61-12eaad42d60a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/adminlte.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/adminlte.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontoffice/search.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontoffice/search.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,6 +193,7 @@
       <workItem from="1575550120325" duration="2757000" />
       <workItem from="1575553566389" duration="39000" />
       <workItem from="1575553607847" duration="1433000" />
+      <workItem from="1575556468444" duration="2060000" />
     </task>
     <servers />
   </component>
@@ -247,10 +247,11 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state width="498" height="446" key="SwitcherDM/70.27.1850.1053@70.27.1850.1053" timestamp="1575120742941" />
-    <state x="573" y="351" key="com.intellij.ide.util.TipDialog" timestamp="1575553566424">
-      <screen x="0" y="25" width="1920" height="1055" />
+    <state x="2493" y="334" key="com.intellij.ide.util.TipDialog" timestamp="1575556468504">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="513" y="304" key="com.intellij.ide.util.TipDialog/0.25.1718.903@0.25.1718.903" timestamp="1575550122761" />
     <state x="573" y="351" key="com.intellij.ide.util.TipDialog/0.25.1920.1055@0.25.1920.1055" timestamp="1575553566423" />
+    <state x="2493" y="334" key="com.intellij.ide.util.TipDialog/1920.0.1920.1080/0.25.1920.1055@1920.0.1920.1080" timestamp="1575556468504" />
   </component>
 </project>

@@ -191,12 +191,12 @@ return [
         ],
         ['header' => 'COIN DES ADMINS'],
         [
-            'text'       => 'Admin-Liste des ateliers',
+            'text'       => 'Liste des ateliers',
             'url'        => 'sessionList',
             'icon'       => 'fas fa-fw fa-list'
         ],
         [
-            'text'       => 'Admin-Demandes de thème',
+            'text'       => 'Demandes de thème',
             'url'        => 'themePage',
             'icon'       => 'fas fa-fw fa-list'
         ],
