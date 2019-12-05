@@ -94,8 +94,9 @@
                                         <td>{{$item->description}}</td>
                                         @if($item->room)
                                             <td>{{$item->room}}</td>
-                                            @else
-                                            <td><small class="badge badge-danger"><i class="far fa-calendar-times"></i> Pas de salle</small></td>
+                                        @else
+                                            <td><small class="badge badge-danger"><i class="far fa-calendar-times"></i>
+                                                    Pas de salle</small></td>
                                         @endif
                                         <td>
                                             <a href="{{ route('sessionDetails', ['id'=> $item->id ]) }}">
@@ -256,42 +257,40 @@
                 </div>
             @endif
         @else
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-8">
-                        <div class="card">
-                            <div class="card-body">
-                                <h3> Vous n'êtes pas connecté(e), voici la liste des cours les plus récents : </h3>
-                                <table class="table table-bordered">
-                                    <thead>
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3> Vous n'êtes pas connecté(e), voici la liste des cours les plus récents : </h3>
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Cours</th>
+                                    <th>Professeur</th>
+                                    <th>Salle</th>
+                                    <th>Niveau</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                @foreach($allSessions_guest as $item)
                                     <tr>
-                                        <th>Date</th>
-                                        <th>Cours</th>
-                                        <th>Professeur</th>
-                                        <th>Salle</th>
-                                        <th>Niveau</th>
+                                        <td>{{$item->date.' à '.$item->startedHour.'-'.$item->endedHour}}</td>
+                                        <td>{{$item->title}}</td>
+                                        <td> {{$item->user_id[0]->firstname.' '.$item->user_id[0]->lastname}}</td>
+                                        <td><span class="badge bg-danger">{{$item->room}}</span></td>
+                                        <td>
+                                            @for($i = 0; $i < $item->difficulty; $i++)
+                                                <i class="fas fa-star"></i>
+                                            @endfor
+                                        </td>
                                     </tr>
-                                    </thead>
-                                    <tbody>
-                                    @foreach($allSessions_guest as $item)
-                                        <tr>
-                                            <td>{{$item->date.' à '.$item->startedHour.'-'.$item->endedHour}}</td>
-                                            <td>{{$item->title}}</td>
-                                            <td> {{$item->user_id[0]->firstname.' '.$item->user_id[0]->lastname}}</td>
-                                            <td><span class="badge bg-danger">{{$item->room}}</span></td>
-                                            <td>
-                                                @for($i = 0; $i < $item->difficulty; $i++)
-                                                    <i class="fas fa-star"></i>
-                                                @endfor
-                                            </td>
-                                        </tr>
-                                    @endforeach
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="card-footer">Envie de vous inscrire à un de ces cours ? Inscrivez-vous sur le
-                                site sans plus tarder !
-                            </div>
+                                @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="card-footer">Envie de vous inscrire à un de ces cours ? <a href="{{route("login")}}">Connectez-vous<a> sur le
+                            site sans plus tarder !
                         </div>
                     </div>
                 </div>

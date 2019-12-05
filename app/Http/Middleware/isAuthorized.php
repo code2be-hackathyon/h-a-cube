@@ -19,6 +19,6 @@ class isAuthorized
         if(Auth::check()) {
             return $next($request);
         }
-        return response()->view('auth/register');
+        return response()->view('auth/login');
     }
 }

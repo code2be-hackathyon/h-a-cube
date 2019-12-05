@@ -12,8 +12,7 @@
                 <div class="card-body">
                     <div class="card-body">
                         <p>Adresse mail : {{  Auth::user()->email  }}</p>
-                        <div class="row"><p>Mot de passe : ********</p>
-                        </div>
+                        <p>Mot de passe : ********</p>
                         <p>Nom : <b>{{ $user->lastname }}</b></p>
                         <p>Prénom : <b>{{ $user->firstname }}</b></p>
                         <p>Age : <b>{{ $user->age }} ans</b></p>

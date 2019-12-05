@@ -92,7 +92,7 @@ return [
 
     'sidebar_mini' => true,
     'sidebar_collapse' => false,
-    'sidebar_collapse_auto_size' => false,
+    'sidebar_collapse_auto_size' => true,
     'sidebar_collapse_remember' => false,
     'sidebar_collapse_remember_no_transition' => true,
     'sidebar_scrollbar_theme' => 'os-theme-light',
@@ -175,17 +175,17 @@ return [
     'menu' => [
         ['header' => 'LES COURS'],
         [
-            'text'       => 'Chercher un cours',
+            'text'       => 'Chercher un atelier',
             'url'        => 'searchSession',
             'icon'       => 'fas fa-fw fa-search'
         ],
         [
-            'text'       => 'Créer un cours',
+            'text'       => 'Créer un atelier',
             'url'        => 'createSession',
             'icon'       => 'fas fa-fw fa-plus-circle',
         ],
         [
-            'text'       => 'Proposer une matière',
+            'text'       => 'Proposer un thème',
             'url'        => 'newCourse',
             'icon'       => 'fas fa-fw fa-plus',
         ],

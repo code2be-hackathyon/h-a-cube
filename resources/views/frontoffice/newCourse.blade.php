@@ -26,7 +26,7 @@
                             </div>
                         </div>
                         <div id="footer">
-                            <button type="submit" class="btn btn-primary">Envoyer</button>
+                            <button type="submit" class="btn btn-warning">Envoyer</button>
                         </div>
                     </form>
                 </div>
