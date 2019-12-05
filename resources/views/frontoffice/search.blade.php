@@ -5,7 +5,7 @@
 
 
     <?php
-    $sessions = \App\Sessions::all();
+    $sessions = \App\Sessions::where('isAccepted', 1)->get();
     ?>
 
     <section class="content">

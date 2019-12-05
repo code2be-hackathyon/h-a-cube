@@ -15,7 +15,6 @@
         </div>
     @else
         @if(Auth::check())
-
             <div class="modal fade" id="modal-default">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -40,7 +39,7 @@
             <!-- /.modal -->
             <div class="card">
                 <div class="card-body">
-                    <h3> N'oubliez pas vos cours déja insrits </h3>
+                    <h3> N'oubliez pas vos cours déja inscrits </h3>
                     <table class="table table-bordered">
                         <thead>
                         <tr>
