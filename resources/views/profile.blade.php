@@ -13,8 +13,6 @@
                     <div class="card-body">
                         <p>Adresse mail : {{  Auth::user()->email  }}</p>
                         <div class="row"><p>Mot de passe : ********</p>
-                            <div class=col-md-1><a class="btn btn-block bg-gradient-primary"
-                                                   href="{{route('changePwd')}}">Changer</a></div>
                         </div>
                         <p>Nom : <b>{{ $user->lastname }}</b></p>
                         <p>Prénom : <b>{{ $user->firstname }}</b></p>

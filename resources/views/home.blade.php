@@ -134,6 +134,7 @@
             <!-- /.modal -->
             <div class="card">
                 <div class="card-body">
+                    @if(count($sessionsForUser->toArray()) > 0)
                     <h3> N'oubliez pas vos cours déja inscrits </h3>
                     <table class="table table-bordered">
                         <thead>
@@ -145,21 +146,24 @@
                             <th>Niveau</th>
                         </tr>
                         </thead>
-                        <tbody>
-                        @foreach($sessionsForUser as $item)
-                            <tr>
-                                <td>{{$item->date.' à '.$item->startedHour.'-'.$item->endedHour}}</td>
-                                <td>{{$item->title}}</td>
-                                <td> {{$item->user_id[0]->firstname.' '.$item->user_id[0]->lastname}}</td>
-                                <td><span class="badge bg-danger">{{$item->room}}</span></td>
-                                <td>
-                                    @for($i = 0; $i < $item->difficulty; $i++)
-                                        <i class="fas fa-star"></i>
-                                    @endfor
-                                </td>
-                            </tr>
-                        @endforeach
-                        </tbody>
+                            <tbody>
+                            @foreach($sessionsForUser as $item)
+                                <tr>
+                                    <td>{{$item->date.' à '.$item->startedHour.'-'.$item->endedHour}}</td>
+                                    <td>{{$item->title}}</td>
+                                    <td> {{$item->user_id[0]->firstname.' '.$item->user_id[0]->lastname}}</td>
+                                    <td><span class="badge bg-danger">{{$item->room}}</span></td>
+                                    <td>
+                                        @for($i = 0; $i < $item->difficulty; $i++)
+                                            <i class="fas fa-star"></i>
+                                        @endfor
+                                    </td>
+                                </tr>
+                            @endforeach
+                            </tbody>
+                        @else
+                            <h3>Vous n'êtes inscrit à aucun cours</h3>
+                        @endif
                     </table>
                 </div>
             </div>
