@@ -135,7 +135,7 @@
             <div class="card">
                 <div class="card-body">
                     @if(count($sessionsForUser->toArray()) > 0)
-                    <h3> N'oubliez pas vos cours déja inscrits </h3>
+                    <h3> Le dernier cours auquel vous êtes inscrit : </h3>
                     <table class="table table-bordered">
                         <thead>
                         <tr>
