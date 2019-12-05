@@ -40,7 +40,7 @@ class CourseController extends Controller
     public function refuseTheme(Request $request)
     {
         Courses::where('id', $request->id)->update(['isAccepted' => 2]);
-        return view('backoffice/themePage');
+        return $this->themePage();
     }
 
     public function getAll()

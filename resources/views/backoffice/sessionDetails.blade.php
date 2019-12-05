@@ -14,7 +14,6 @@
                 <div class="card-body">
                     <!-- /.card-header -->
                     <!-- form start -->
-                    <?php //TODO pass params in the action ?>
                     <form role="form" action="{{route('sessionDetailsValidate', ['id' => $data->id])}}" method="POST">
                         @csrf
                         <div class="card-body">
@@ -51,6 +50,9 @@
                             <button type="submit" class="btn btn-primary">Envoyer</button>
                         </div>
                     </form>
+                    <a href="{{ route('deleteSession', ['id'=> $data->id ]) }}">
+                        <button class="btn btn-warning">Supprimer</button>
+                    </a>
                     <!-- /.card -->
                 </div>
             </div>

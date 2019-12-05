@@ -30,9 +30,6 @@
 
                             </div>
                             <div class="form-group">
-                                <input type="hidden" id="user_id" value="{{Auth::user()->id}}">
-                            </div>
-                            <div class="form-group">
                                 <label for="title">Titre</label>
                                 <input type="text" class="form-control" id="title" name="title" required>
                             </div>
