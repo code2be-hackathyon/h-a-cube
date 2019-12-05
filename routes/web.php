@@ -36,6 +36,8 @@ Route::group(['middleware' => 'isAuthorized'], function () {
 
     Route::get('voteForSession', 'ScoresController@vote')->name('voteForSession');
 
+    Route::get('registerToSession', 'StudentPoolController@registerToSession')->name('registerToSession');
+
 });
 
 

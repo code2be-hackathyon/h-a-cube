@@ -21,6 +21,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
+        $this->index();
     }
 
     /**
@@ -41,9 +42,9 @@ class HomeController extends Controller
 
         if (Auth::check()) {
             // Les sessions auxquelles l'user connecté est inscrit
-            $studentPoolForUser = Studentpools::where('user_id', Auth::user()->id)->where('note', null)->select('session_id')->first();
-            if ($studentPoolForUser) {
-                $sessionsForUser = Sessions::where('id', $studentPoolForUser->session_id)->where('date', '>', date('Y-m-d'))->get();
+            $studentPoolForUser = Studentpools::where('user_id', Auth::user()->id)->where('note', null)->select('session_id')->take(3)->get();
+            if (count($studentPoolForUser->toArray()) > 0) {
+                $sessionsForUser = Sessions::where('id', $studentPoolForUser[0]->session_id)->where('date', '>', date('Y-m-d'))->get();
                 foreach ($sessionsForUser as $item) {
                     $item->courses_id = Courses::where('id', $item->courses_id)->select('label')->get();
                     $item->user_id = User::where('id', $item->user_id)->select('firstname', 'lastname')->get();

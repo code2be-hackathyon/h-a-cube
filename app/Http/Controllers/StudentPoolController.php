@@ -17,6 +17,12 @@ class StudentPoolController extends Controller
         return $studentpools;
     }
 
+    public function registerToSession(Request $request)
+    {
+        Studentpools::insert(['user_id' => $request->user_id, 'session_id' => $request->id]);
+        return view('frontoffice/search');
+    }
+
     public function store(Request $request)
     {
         $studentpools = Studentpools::create($request->all());
