@@ -33,7 +33,7 @@
                                     <tr>
                                         <!-- /  $dataFromDate = DB::table('sessions')->select('*')->where('date'== (date('Y-m-d ')));
                                         var_dump($dataFromDate);  -->
-                                        <td>{{$item->date}}</td>
+                                        <td>{{date('d/m/Y',strtotime($item->date)).' de '.$item->startedHour.' à '.$item->endedHour}}</td>
                                         <td>{{$item->user_id[0]->firstname}}</td>
                                         <td>{{$item->courses_id[0]->label}}</td>
                                         <td>{{$item->description}}</td>
@@ -88,7 +88,7 @@
                             @foreach($dataFromDate as $item)
                                 @if($item->isAccepted)
                                     <tr>
-                                        <td>{{$item->date}}</td>
+                                        <td>{{date('d/m/Y',strtotime($item->date)).' de '.$item->startedHour.' à '.$item->endedHour}}</td>
                                         <td>{{$item->user_id[0]->firstname}}</td>
                                         <td>{{$item->courses_id[0]->label}}</td>
                                         <td>{{$item->description}}</td>
@@ -156,7 +156,7 @@
                             <tbody>
                             @foreach($sessionsForUser as $item)
                                 <tr>
-                                    <td>{{$item->date.' à '.$item->startedHour.'-'.$item->endedHour}}</td>
+                                    <td>{{date('d/m/Y',strtotime($item->date)).' de '.$item->startedHour.' à '.$item->endedHour}}</td>
                                     <td>{{$item->title}}</td>
                                     <td> {{$item->user_id[0]->firstname.' '.$item->user_id[0]->lastname}}</td>
                                     <td><span class="badge bg-danger">{{$item->room}}</span></td>
@@ -239,7 +239,7 @@
                                     <tr>
                                         <td>{{$item->title}}</td>
                                         <td>{{$item->courses_id[0]->label}}</td>
-                                        <td>{{$item->date.' à '.$item->startedHour.'-'.$item->endedHour}}</td>
+                                        <td>{{date('d/m/Y',strtotime($item->date)).' de '.$item->startedHour.' à '.$item->endedHour}}</td>
                                         <td>
                                             <form role="form" method="GET" action="{{route('voteForSession')}}">
                                                 @csrf
@@ -275,7 +275,7 @@
                                 <tbody>
                                 @foreach($allSessions_guest as $item)
                                     <tr>
-                                        <td>{{$item->date.' à '.$item->startedHour.'-'.$item->endedHour}}</td>
+                                        <td>{{date('d/m/Y',strtotime($item->date)).' de '.$item->startedHour.' à '.$item->endedHour}}</td>
                                         <td>{{$item->title}}</td>
                                         <td> {{$item->user_id[0]->firstname.' '.$item->user_id[0]->lastname}}</td>
                                         <td><span class="badge bg-danger">{{$item->room}}</span></td>
