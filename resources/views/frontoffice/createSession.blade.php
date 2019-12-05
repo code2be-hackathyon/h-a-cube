@@ -59,20 +59,12 @@
                                 <label for="difficulty">Difficulté</label>
                                 <input type="number" class="form-control" id="difficulty" name="difficulty" min="1"
                                        max="5"
-                                       onchange="
-                                           // const difficulty_div = document.getElementById('difficulty_div');
-                                           // const value = document.getElementById('difficulty').value;
-                                           // for (star of value) {
-                                           //     let div = document.createElement('span');
-                                           //     div.className = 'fa fa-star checked';
-                                           //     difficulty_div.appendChild(div);
-                                           // }
-                                       " required>
+                                       required>
                             </div>
                         </div>
                         <!-- /.card-body -->
                         <div id="footer">
-                            <button type="submit" class="btn btn-warning">Envoyer</button>
+                            <button type="submit" class="btn btn-warning toastsDefaultSuccess">Envoyer</button>
                         </div>
                     </form>
                     <!-- /.card -->
@@ -80,4 +72,15 @@
             </div>
         </div>
     </section>
+@endsection
+@section('js')
+    <script>
+        $('.toastsDefaultSuccess').click(function() {
+            $(document).Toasts('create', {
+                class: 'bg-success',
+                title: 'Succès',
+                body: 'Votre demande d\'atelier a bien été pris en compte'
+            })
+        });
+    </script>
 @endsection
